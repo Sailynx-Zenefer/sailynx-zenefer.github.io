@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif
+        }
+    </style>
+    <title style="color:white;">SIDEREALISM</title>
+    <h1 style="color:white;">
+        SIDEREALISM
+    </h1>
+</head>
+<br>
+<br>
+    <body style="background-color:black;">
+        <h3 style="color:white;">
+            This is
+        </h3>
+        <p style="color:white;">
+            a website, congratulations you are a visitor. 
+        </p>
+        <br>
+        <p style="color:white;">
+            Ommmbabybeepboop: you're in the soup
+        </p>
+        <p style="color:lightgoldenrodyellow;">
+            <a href="/cosmumble/poetry.html">cosmic mumbles</a>
+        </p>
+        <img src="Lonesome.png" alt="Lonesome"/>
+        </body>
+</html>
