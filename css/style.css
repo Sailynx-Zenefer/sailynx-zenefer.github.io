@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color:white;
+    font-size: 2.129vmin;
+    font-family: sans-serif;
+    margin: 2.129vmin;
+}
+/*this is a commment */
+h1 {
+color:red;
+}
+
+p {
+    color:wheat;
+}
+
+.leftpart{
+    width: 61.803vw;
+    background-color: black;
+    border:2.129vmin solid red;
+    padding:2.129vmin;
+}
+}
+.rightpart{
+    width: 61.803vw;
+    background-color: darkblue;
+}
+span {
+    color:aquamarine;
+}
+
+.box {
+    background-color: darkblue;
+    width: 61.803vw;
+    border:2.129vmin solid green;
+}
