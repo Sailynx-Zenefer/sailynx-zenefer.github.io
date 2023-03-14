@@ -1,36 +1,140 @@
 body {
     background-color: black;
     color:white;
-    font-size: 2.129vmin;
-    font-family: sans-serif;
-    margin: 2.129vmin;
+    font-family:'DejaVu Sans Mono','Consolas','Roboto Mono','Menlo-Regular','Lucida Console',monospace;
+    font-size:calc(1rem + 1.5vw);
+    overflow-wrap: break-word;
 }
 /*this is a commment */
+
+a:link{
+color:blue
+}
+
+a:visited{
+color:darkmagenta
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+a:active{
+    text-shadow:
+    white 0 0 5px,
+    white 0 0 5px;
+}
 h1 {
-color:red;
+    position: relative;
+    text-align: center;
+    background-color: rgb(0, 0, 0,.6);
 }
 
+h2 {
+    position: relative;
+    text-align: center;
+    background-color: rgb(0, 0, 0,.6);
+}
 p {
-    color:wheat;
+    position: relative;
+    text-align: center;
+    background-color: rgb(0, 0, 0,.6);
 }
 
-.leftpart{
-    width: 61.803vw;
+.hyperloom{
+    max-width: 38.197svw;
+    min-width: 38.197svw;
+    height: 100svh;
+    background-color: grey;
+    position: fixed;
+    top:0;
+    right: 0;
+}
+
+.hlbox {
+    border: 10px solid darkslategrey;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    padding: 10px;
+    position: sticky;
+    position: center;
+}
+.hlboxbottom {
+    outline: 10px groove darkslategrey;
+    outline-offset: -10px;
+    height: auto;
+    max-width: 38.197svw;
+    min-width: 38.197svw;
+    right:0;
+    bottom:0;
+    top:0;
+    position: fixed;
+    pointer-events: none;
+}
+
+header{
+    border: 10px solid darkslategrey;
+    border-bottom-width: 5px;
+    padding: 10px;
+    position: sticky;
+    position: center;
+}
+
+nav{
+    border: 10px solid darkslategrey;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    padding: 10px;
+    position: sticky;
+    position: center;
+}
+
+.hyperweave{ /*container*/
+    max-width: 61.803svw;
+    min-width: 61.803svw;
     background-color: black;
-    border:2.129vmin solid red;
+    background-image: url(../img/floater.png);
+    background-size:contain;
+    background-repeat: repeat;
+    background-position:top;
+    background-attachment:scroll,local;
+    position: absolute;
+    left:0;
+    top:0;
+    /*think about tiling backgrounf*/
+    /*use min max width */
+}
+
+.hwtextbox{
+    max-width: 61.803svw;
     padding:2.129vmin;
+    position: relative;
+    background-color: rgb(0, 0, 0,.3);
 }
+.hwtextbackg{
+    background-color: rgb(0, 0, 0,.3);
 }
-.rightpart{
-    width: 61.803vw;
-    background-color: darkblue;
+
+.hwborder{
+    max-width: 61.803svw;
+    min-width: 61.803svw;
+    height: auto;
+    left:0;
+    top:0;
+    bottom:0;
+    border: 10px double darkslategrey;
+    border-right-style: none;
+    position: fixed;
+    pointer-events: none;
 }
-span {
-    color:aquamarine;
+.highlight {
+    color:firebrick;
 }
 
 .box {
-    background-color: darkblue;
-    width: 61.803vw;
-    border:2.129vmin solid green;
+    background-color:grey;
+    border: 5px solid darkslategray;
 }
+
+
+/* want to make a html only clickbox alter thing */
