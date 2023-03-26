@@ -281,16 +281,16 @@ p {
 
 .imglink {
     position: fixed;
-    min-height: calc(14.590svh - 20px);
-    max-height: calc(14.590svh - 20px);
+    min-height: calc(14.590lvh - 20px);
+    max-height: calc(14.590lvh - 20px);
     object-fit:contain;
  
 }
 
 .hllogo{
     position: relative;
-    min-height: calc(14.590svh - 20px);
-    max-height: calc(14.590svh - 20px);
+    min-height: calc(14.590lvh - 20px);
+    max-height: calc(14.590lvh - 20px);
     object-fit:contain;
 }
 
@@ -355,8 +355,8 @@ p {
 
 @media all and (orientation: landscape) {
     .hyperloom{
-        max-width: 38.197svw;
-        min-width: 38.197svw;
+        max-width: 38.197lvw;
+        min-width: 38.197lvw;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -369,26 +369,26 @@ p {
     }
 
     header{
-        max-width: 38.197svw;
-        min-width: 38.197svw;
-        min-height: 38.197svh;
-        max-height: 38.197svh;
+        max-width: 38.197lvw;
+        min-width: 38.197lvw;
+        min-height: 38.197lvh;
+        max-height: 38.197lvh;
         position: fixed;
     }    
 
     .hl-blue {
         position: fixed;
-        min-width: calc(23.607svw - 20px);
-        max-width: calc(23.607svw - 20px);
-        min-height: calc(14.590svh - 20px);
-        max-height: calc(14.590svh - 20px);
+        min-width: calc(23.607lvw - 20px);
+        max-width: calc(23.607lvw - 20px);
+        min-height: calc(14.590lvh - 20px);
+        max-height: calc(14.590lvh - 20px);
         padding: 5px;
         border: 5px solid var(--BLUE-LMED);
         border-left-style: none;
         padding-left: 15px;
         background-color: var(--BLUE-LMED-05);
-        top: 23.607svh;
-        right: 14.590svw;
+        top: 23.607lvh;
+        right: 14.590lvw;
     }
 
     .hl-yellow {
@@ -396,11 +396,11 @@ p {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: calc(14.590svw - 10px);
-        max-width: calc(14.590svw - 10px);
-        min-height: calc(14.590svh - 10px);
-        max-height: calc(14.590svh - 10px);
-        top: 23.607svh;
+        min-width: calc(14.590lvw - 10px);
+        max-width: calc(14.590lvw - 10px);
+        min-height: calc(14.590lvh - 10px);
+        max-height: calc(14.590lvh - 10px);
+        top: 23.607lvh;
         right: 0;
         border: 5px solid var(--YELLW-LITE);
         background-color: var(--YELLW-LITE-05);
@@ -408,10 +408,10 @@ p {
     }
 
     .hl-green {
-        min-height: calc(23.607svh - 20px);
-        max-height: calc(23.607svh - 20px);
-        min-width: calc(38.197svw - 20px);
-        max-width: calc(38.197svw - 20px);
+        min-height: calc(23.607lvh - 20px);
+        max-height: calc(23.607lvh - 20px);
+        min-width: calc(38.197lvw - 20px);
+        max-width: calc(38.197lvw - 20px);
         border: 5px solid var(--GREEN-LITE);
         border-radius: 5.573% 5.573% 0 0;
         padding: 5px;
@@ -423,23 +423,23 @@ p {
     }
 
     .hl-red {
-        min-height: calc(61.803svh - 20px);
-        max-height: calc(61.803svh - 20px);
-        min-width: calc(38.197svw - 20px);
-        max-width: calc(38.197svw - 20px);
+        min-height: calc(61.803lvh - 20px);
+        max-height: calc(61.803lvh - 20px);
+        min-width: calc(38.197lvw - 20px);
+        max-width: calc(38.197lvw - 20px);
         border: 5px solid var(--RED-HMED);
         border-radius: 5.573%;
         padding: 5px;
         position: fixed;
-        top: 38.197svh;
+        top: 38.197lvh;
         border-radius: 0 0 5.573% 5.573%;
         text-align: center;
         background-color: var(--RED-HMED-05);
     }
 
     .hyperweave{ /*container*/
-        max-width: 61.803svw;
-        min-width: 61.803svw;
+        max-width: 61.803lvw;
+        min-width: 61.803lvw;
         height: 100%;
         overflow: scroll;
         position: absolute;
@@ -452,8 +452,8 @@ p {
     }
 
     .hwbackground{ 
-        max-width: 61.803svw;
-        min-width: 61.803svw;
+        max-width: 61.803lvw;
+        min-width: 61.803lvw;
         height: 100%;
         position: absolute;
         left:0;
@@ -470,14 +470,14 @@ p {
     }
 
     .hwborder{
-        max-width: calc(61.803svw - 18px);
-        min-width: calc(61.803svw - 18px);
+        max-width: calc(61.803lvw - 18px);
+        min-width: calc(61.803lvw - 18px);
         height: auto;
         left:0;
         top:0;
         bottom:0;
         border: 9px double var(--BLUE-DARK);
-        border-radius: 5.573% 0 5.573% 5.573%;
+        border-radius: 5.573%;
         outline: 3px solid var(--BLUE-LMED);
         outline-offset:-6px;
         outline-style: solid;
@@ -490,8 +490,8 @@ p {
 /* PORTRAIT ORIENTATION */
 @media all and (orientation: portrait) {
     .hyperloom{
-        max-height: 38.197svh;
-        min-height: 38.197svh;
+        max-height: 38.197lvh;
+        min-height: 38.197lvh;
         width: 100%;
         background-color:none;
         position: fixed;
@@ -503,25 +503,25 @@ p {
 
     header{
         position: fixed;
-        min-height: 38.197svh;
-        max-height: 38.197svh;
-        min-width: 38.197svw;
-        max-width: 38.197svw;
+        min-height: 38.197lvh;
+        max-height: 38.197lvh;
+        min-width: 38.197lvw;
+        max-width: 38.197lvw;
     }    
 
     .hl-blue {
         position: fixed;
-        min-height: calc(23.607svh - 10px);
-        max-height: calc(23.607svh - 10px);
-        min-width: calc(14.590svw - 20px);
-        max-width: calc(14.590svw - 20px);
+        min-height: calc(23.607lvh - 10px);
+        max-height: calc(23.607lvh - 10px);
+        min-width: calc(14.590lvw - 20px);
+        max-width: calc(14.590lvw - 20px);
         padding: 5px;
         border: 5px solid var(--BLUE-LMED);
         border-top-style: none;
         padding-top: 6px;
         background-color: var(--BLUE-LMED-05);
-        left: 23.607svw;
-        bottom: 14.590svh;
+        left: 23.607lvw;
+        bottom: 14.590lvh;
     }
 
     .hl-yellow {
@@ -529,21 +529,21 @@ p {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: calc(14.590svh - 10px);
-        max-height: calc(14.590svh - 10px);
-        min-width: calc(14.590svw - 10px);
-        max-width: calc(14.590svw - 10px);
+        min-height: calc(14.590lvh - 10px);
+        max-height: calc(14.590lvh - 10px);
+        min-width: calc(14.590lvw - 10px);
+        max-width: calc(14.590lvw - 10px);
         border: 5px solid var(--YELLW-LITE);
         background-color: var(--YELLW-LITE-05);
         bottom: 0;
-        left: 23.607svw;
+        left: 23.607lvw;
     }
 
     .hl-green {
-        min-width: calc(23.607svw - 20px);
-        max-width: calc(23.607svw - 20px);
-        min-height: calc(38.197svh - 20px);
-        max-height: calc(38.197svh - 20px);
+        min-width: calc(23.607lvw - 20px);
+        max-width: calc(23.607lvw - 20px);
+        min-height: calc(38.197lvh - 20px);
+        max-height: calc(38.197lvh - 20px);
         border: 5px solid var(--GREEN-LITE);
         border-radius: 5.573% 0 0 5.573%;
         padding: 5px;
@@ -555,15 +555,15 @@ p {
     }
 
     .hl-red {
-        min-width: calc(61.803svw - 20px);
-        max-width: calc(61.803svw - 20px);
-        min-height: calc(38.197svh - 20px);
-        max-height: calc(38.197svh - 20px);
+        min-width: calc(61.803lvw - 20px);
+        max-width: calc(61.803lvw - 20px);
+        min-height: calc(38.197lvh - 20px);
+        max-height: calc(38.197lvh - 20px);
         border: 5px solid var(--RED-HMED);
         border-radius: 5.573%;
         padding: 5px;
         position: fixed;
-        left: 38.197svw;
+        left: 38.197lvw;
         bottom: 0;
         border-radius: 0 5.573% 5.573% 0;
         text-align: center;
@@ -573,8 +573,8 @@ p {
 
 
     .hyperweave{ /*container*/
-        max-height: 61.803svh;
-        min-height: 61.803svh;
+        max-height: 61.803lvh;
+        min-height: 61.803lvh;
         width: 100%;
         overflow: scroll;
         position: absolute;
@@ -587,14 +587,14 @@ p {
     }
 
     .hwborder{
-        max-height: calc(61.803svh - 18px);
-        min-height: calc(61.803svh - 18px);
+        max-height: calc(61.803lvh - 18px);
+        min-height: calc(61.803lvh - 18px);
         width: auto;
         left:0;
         top:0;
         right:0;
         border: 9px double var(--BLUE-DARK);
-        border-radius: 5.573% 5.573% 5.573% 0;
+        border-radius: 5.573%;
         outline: 3px solid var(--BLUE-LMED);
         outline-offset:-6px;
         outline-style: solid;
