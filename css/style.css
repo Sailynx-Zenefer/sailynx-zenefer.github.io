@@ -132,13 +132,78 @@
 /* Orientation independant*/
 
 body {
-    background-color: black;
+    width: 100%;
+    height: 100%;
+    background: black;
     color:var(--GREY-HLITE);
     font-family:'DejaVu Sans Mono','Consolas','Roboto Mono','Menlo-Regular','Lucida Console',monospace;
     font-size:calc(1rem + 1.5vw);
     overflow-wrap: break-word;
 }
 
+/* Stars 
+------------------------------------- */
+
+#space, .stars {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom 5s infinite;
+  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  animation-delay: 0s;
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  animation-delay: 1s;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 2s;
+}
+.stars:nth-child(4) {
+  background-position: 40% -80%;
+  animation-delay: 3s;
+}
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 4s;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  } 
+  85% {
+    opacity: 1;
+    transform: scale(2.8);
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.5);
+  }
+}
 
 
 a:link{
@@ -162,21 +227,25 @@ a:active{
 h1 {
     position: relative;
     text-align: center;
-    background-color: rgb(0, 0, 0,.6);
+    background-color: var(--BLUE-LMED-05);
     border-radius: 5.573%;
 }
 
 h2 {
     position: relative;
     text-align: center;
-    background-color: rgb(0, 0, 0,.6);
+    background-color: var(--BLUE-LMED-05);
     border-radius: 5.573%;
 }
 p {
+    display: inline-flex;
     position: relative;
+    justify-content: center;
+    align-self: center;
     text-align: center;
-    background-color: rgb(0, 0, 0,.6);
+    background-color: var(--BLUE-LMED-05);
     border-radius: 5.573%;
+    box-decoration-break: clone;
 }
 
 .highlight {
@@ -184,8 +253,9 @@ p {
 }
 
 .box {
-    background-color: var(--GREY-HMED);
-    border: 5px solid var(--GREY-LMED);
+    background-color: var(--BLUE-LMED-05);
+    border: 5px solid var(--BLUE-HMED);
+    border-radius: 5.573%;
 }
 
 /*Hyperloom bits */
@@ -245,49 +315,39 @@ p {
   }
 
 /* Hyperweave bits */
-.hwbackground{ 
-    background-color: var(--BLUE-LDARK);
-/*    background-image: url(../img/floater.png);
-    background-size:contain;
-    background-repeat: repeat;
-    background-position:top;
-    background-attachment:scroll,local;
-*/
-    position: absolute;
-    left:0;
-    top:0;
-    z-index: 400;
-    /*think about tiling backgrounf*/
-    /*use min max width */
-}
+
 
 .hwimg{
     display: block;
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    max-width: 61.803em;
-    max-height: 38.197em;
     width: auto;
     position: relative;
+    object-fit: contain;
 }
 
 .hwtextbox{
-    padding:2.129vmin;
+    display: inline-flex;
+    flex-direction: column;
     position: relative;
-    background-color: rgb(0, 0, 0,.3);
+    justify-content: center;
+    align-self: center;
+    text-align: center;
     border-radius: 5.573%;
+    box-sizing: border-box;
 }
 
 .hwimgbox{
     position: relative;
-    background-color: rgb(0, 0, 0,.3);
-    box-sizing:content-box;
+    background-color: var(--BLUE-LMED-05);
+    box-sizing:border-box;
+    border-radius: 5.573%;
 }
 
 
 .hwtextbackg{
-    background-color: rgb(0, 0, 0,.3);
+    background-color: var(--BLUE-LMED-05);
     border-radius: 5.573%;
 }
 
@@ -325,9 +385,9 @@ p {
         padding: 5px;
         border: 5px solid var(--BLUE-LMED);
         border-left-style: none;
-        border-radius: 5.573% 5.573% 0 5.573% ;
         padding-left: 15px;
         background-color: var(--BLUE-LMED-05);
+        top: 23.607svh;
         right: 14.590svw;
     }
 
@@ -340,11 +400,10 @@ p {
         max-width: calc(14.590svw - 10px);
         min-height: calc(14.590svh - 10px);
         max-height: calc(14.590svh - 10px);
+        top: 23.607svh;
+        right: 0;
         border: 5px solid var(--YELLW-LITE);
         background-color: var(--YELLW-LITE-05);
-        border-radius: 5.573% 5.573% 0 0;
-        top: 0;
-        right: 0;
     
     }
 
@@ -354,10 +413,11 @@ p {
         min-width: calc(38.197svw - 20px);
         max-width: calc(38.197svw - 20px);
         border: 5px solid var(--GREEN-LITE);
-        border-radius: 5.573% 0 0 0;
+        border-radius: 5.573% 5.573% 0 0;
         padding: 5px;
         position: fixed;
-        top: 14.590svh;
+        top: 0;
+        right: 0;
         text-align: center;
         background-color: var(--GREEN-LITE-05);
     }
@@ -383,9 +443,28 @@ p {
         height: 100%;
         overflow: scroll;
         position: absolute;
+        background: none;
         left:0;
         top:0;
         z-index: 450;
+        /*think about tiling backgrounf*/
+        /*use min max width */
+    }
+
+    .hwbackground{ 
+        max-width: 61.803svw;
+        min-width: 61.803svw;
+        height: 100%;
+        position: absolute;
+        left:0;
+        top:0;
+        z-index: 400;
+    /*    background-image: url(../img/floater.png);
+        background-size:contain;
+        background-repeat: repeat;
+        background-position:top;
+        background-attachment:scroll,local;
+    */
         /*think about tiling backgrounf*/
         /*use min max width */
     }
@@ -439,9 +518,9 @@ p {
         padding: 5px;
         border: 5px solid var(--BLUE-LMED);
         border-top-style: none;
-        border-radius: 5.573% 5.573% 0 5.573% ;
         padding-top: 6px;
         background-color: var(--BLUE-LMED-05);
+        left: 23.607svw;
         bottom: 14.590svh;
     }
 
@@ -456,11 +535,8 @@ p {
         max-width: calc(14.590svw - 10px);
         border: 5px solid var(--YELLW-LITE);
         background-color: var(--YELLW-LITE-05);
-        border-radius: 5.573% 0 0 5.573%;
         bottom: 0;
-        left: 0;
-        
-    
+        left: 23.607svw;
     }
 
     .hl-green {
@@ -469,10 +545,10 @@ p {
         min-height: calc(38.197svh - 20px);
         max-height: calc(38.197svh - 20px);
         border: 5px solid var(--GREEN-LITE);
-        border-radius: 5.573% 0 0 0;
+        border-radius: 5.573% 0 0 5.573%;
         padding: 5px;
         position: fixed;
-        left: 14.590svw;
+        left: 0;
         bottom: 0;
         text-align: center;
         background-color: var(--GREEN-LITE-05);
