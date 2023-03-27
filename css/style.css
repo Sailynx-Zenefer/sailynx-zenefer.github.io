@@ -157,7 +157,9 @@ body {
   background-image: 
   url(../img/starsim.gif);
   background-size:cover;
-  background-repeat:repeat
+  background-repeat:repeat;
+  background-position:center;
+
 }
 
 
@@ -236,16 +238,20 @@ p {
 
 .imglink {
     position: fixed;
-    min-height: calc(14.590lvh - 20px);
-    max-height: calc(14.590lvh - 20px);
+    min-height: calc(14.590dvh - 20px);
+    max-height: calc(14.590dvh - 20px);
+    min-width: calc(14.590dvw - 20px);
+    max-width: calc(14.590dvw - 20px);
     object-fit:contain;
  
 }
 
 .hllogo{
-    position: relative;
-    min-height: calc(14.590lvh - 20px);
-    max-height: calc(14.590lvh - 20px);
+    position: fixed;
+    min-height: calc(14.590dvh - 20px);
+    max-height: calc(14.590dvh - 20px);
+    min-width: calc(14.590dvw - 20px);
+    max-width: calc(14.590dvw - 20px);
     object-fit:contain;
 }
 
@@ -310,8 +316,8 @@ p {
 
 @media all and (orientation: landscape) {
     .hyperloom{
-        max-width: 38.197lvw;
-        min-width: 38.197lvw;
+        max-width: 38.197dvw;
+        min-width: 38.197dvw;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -324,26 +330,26 @@ p {
     }
 
     header{
-        max-width: 38.197lvw;
-        min-width: 38.197lvw;
-        min-height: 38.197lvh;
-        max-height: 38.197lvh;
+        max-width: 38.197dvw;
+        min-width: 38.197dvw;
+        min-height: 38.197dvh;
+        max-height: 38.197dvh;
         position: fixed;
     }    
 
     .hl-blue {
         position: fixed;
-        min-width: calc(23.607lvw - 20px);
-        max-width: calc(23.607lvw - 20px);
-        min-height: calc(14.590lvh - 20px);
-        max-height: calc(14.590lvh - 20px);
+        min-width: calc(23.607dvw - 20px);
+        max-width: calc(23.607dvw - 20px);
+        min-height: calc(14.590dvh - 20px);
+        max-height: calc(14.590dvh - 20px);
         padding: 5px;
         border: 5px solid var(--BLUE-LMED);
         border-left-style: none;
         padding-left: 15px;
         background-color: var(--BLUE-LMED-05);
-        top: 23.607lvh;
-        right: 14.590lvw;
+        top: 23.607dvh;
+        right: 14.590dvw;
     }
 
     .hl-yellow {
@@ -351,11 +357,11 @@ p {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: calc(14.590lvw - 10px);
-        max-width: calc(14.590lvw - 10px);
-        min-height: calc(14.590lvh - 10px);
-        max-height: calc(14.590lvh - 10px);
-        top: 23.607lvh;
+        min-width: calc(14.590dvw - 10px);
+        max-width: calc(14.590dvw - 10px);
+        min-height: calc(14.590dvh - 10px);
+        max-height: calc(14.590dvh - 10px);
+        top: 23.607dvh;
         right: 0;
         border: 5px solid var(--YELLW-LITE);
         background-color: var(--YELLW-LITE-05);
@@ -363,10 +369,10 @@ p {
     }
 
     .hl-green {
-        min-height: calc(23.607lvh - 20px);
-        max-height: calc(23.607lvh - 20px);
-        min-width: calc(38.197lvw - 20px);
-        max-width: calc(38.197lvw - 20px);
+        min-height: calc(23.607dvh - 20px);
+        max-height: calc(23.607dvh - 20px);
+        min-width: calc(38.197dvw - 20px);
+        max-width: calc(38.197dvw - 20px);
         border: 5px solid var(--GREEN-LITE);
         border-radius: 5.573% 5.573% 0 0;
         padding: 5px;
@@ -378,23 +384,23 @@ p {
     }
 
     .hl-red {
-        min-height: calc(61.803lvh - 20px);
-        max-height: calc(61.803lvh - 20px);
-        min-width: calc(38.197lvw - 20px);
-        max-width: calc(38.197lvw - 20px);
+        min-height: calc(61.803dvh - 20px);
+        max-height: calc(61.803dvh - 20px);
+        min-width: calc(38.197dvw - 20px);
+        max-width: calc(38.197dvw - 20px);
         border: 5px solid var(--RED-HMED);
         border-radius: 5.573%;
         padding: 5px;
         position: fixed;
-        top: 38.197lvh;
+        top: 38.197dvh;
         border-radius: 0 0 5.573% 5.573%;
         text-align: center;
         background-color: var(--RED-HMED-05);
     }
 
     .hyperweave{ /*container*/
-        max-width: 61.803lvw;
-        min-width: 61.803lvw;
+        max-width: 61.803dvw;
+        min-width: 61.803dvw;
         height: 100%;
         overflow: scroll;
         position: absolute;
@@ -407,8 +413,8 @@ p {
     }
 
     .hwbackground{ 
-        max-width: 61.803lvw;
-        min-width: 61.803lvw;
+        max-width: 61.803dvw;
+        min-width: 61.803dvw;
         height: 100%;
         position: absolute;
         left:0;
@@ -425,8 +431,8 @@ p {
     }
 
     .hwborder{
-        max-width: calc(61.803lvw - 18px);
-        min-width: calc(61.803lvw - 18px);
+        max-width: calc(61.803dvw - 18px);
+        min-width: calc(61.803dvw - 18px);
         height: auto;
         left:0;
         top:0;
@@ -445,8 +451,8 @@ p {
 /* PORTRAIT ORIENTATION */
 @media all and (orientation: portrait) {
     .hyperloom{
-        max-height: 38.197lvh;
-        min-height: 38.197lvh;
+        max-height: 38.197dvh;
+        min-height: 38.197dvh;
         width: 100%;
         background-color:none;
         position: fixed;
@@ -458,25 +464,25 @@ p {
 
     header{
         position: fixed;
-        min-height: 38.197lvh;
-        max-height: 38.197lvh;
-        min-width: 38.197lvw;
-        max-width: 38.197lvw;
+        min-height: 38.197dvh;
+        max-height: 38.197dvh;
+        min-width: 38.197dvw;
+        max-width: 38.197dvw;
     }    
 
     .hl-blue {
         position: fixed;
-        min-height: calc(23.607lvh - 10px);
-        max-height: calc(23.607lvh - 10px);
-        min-width: calc(14.590lvw - 20px);
-        max-width: calc(14.590lvw - 20px);
+        min-height: calc(23.607dvh - 10px);
+        max-height: calc(23.607dvh - 10px);
+        min-width: calc(14.590dvw - 20px);
+        max-width: calc(14.590dvw - 20px);
         padding: 5px;
         border: 5px solid var(--BLUE-LMED);
         border-top-style: none;
         padding-top: 6px;
         background-color: var(--BLUE-LMED-05);
-        left: 23.607lvw;
-        bottom: 14.590lvh;
+        left: 23.607dvw;
+        bottom: 14.590dvh;
     }
 
     .hl-yellow {
@@ -484,21 +490,21 @@ p {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: calc(14.590lvh - 10px);
-        max-height: calc(14.590lvh - 10px);
-        min-width: calc(14.590lvw - 10px);
-        max-width: calc(14.590lvw - 10px);
+        min-height: calc(14.590dvh - 10px);
+        max-height: calc(14.590dvh - 10px);
+        min-width: calc(14.590dvw - 10px);
+        max-width: calc(14.590dvw - 10px);
         border: 5px solid var(--YELLW-LITE);
         background-color: var(--YELLW-LITE-05);
         bottom: 0;
-        left: 23.607lvw;
+        left: 23.607dvw;
     }
 
     .hl-green {
-        min-width: calc(23.607lvw - 20px);
-        max-width: calc(23.607lvw - 20px);
-        min-height: calc(38.197lvh - 20px);
-        max-height: calc(38.197lvh - 20px);
+        min-width: calc(23.607dvw - 20px);
+        max-width: calc(23.607dvw - 20px);
+        min-height: calc(38.197dvh - 20px);
+        max-height: calc(38.197dvh - 20px);
         border: 5px solid var(--GREEN-LITE);
         border-radius: 5.573% 0 0 5.573%;
         padding: 5px;
@@ -510,15 +516,15 @@ p {
     }
 
     .hl-red {
-        min-width: calc(61.803lvw - 20px);
-        max-width: calc(61.803lvw - 20px);
-        min-height: calc(38.197lvh - 20px);
-        max-height: calc(38.197lvh - 20px);
+        min-width: calc(61.803dvw - 20px);
+        max-width: calc(61.803dvw - 20px);
+        min-height: calc(38.197dvh - 20px);
+        max-height: calc(38.197dvh - 20px);
         border: 5px solid var(--RED-HMED);
         border-radius: 5.573%;
         padding: 5px;
         position: fixed;
-        left: 38.197lvw;
+        left: 38.197dvw;
         bottom: 0;
         border-radius: 0 5.573% 5.573% 0;
         text-align: center;
@@ -528,8 +534,8 @@ p {
 
 
     .hyperweave{ /*container*/
-        max-height: 61.803lvh;
-        min-height: 61.803lvh;
+        max-height: 61.803dvh;
+        min-height: 61.803dvh;
         width: 100%;
         overflow: scroll;
         position: absolute;
@@ -542,8 +548,8 @@ p {
     }
 
     .hwborder{
-        max-height: calc(61.803lvh - 18px);
-        min-height: calc(61.803lvh - 18px);
+        max-height: calc(61.803dvh - 18px);
+        min-height: calc(61.803dvh - 18px);
         width: auto;
         left:0;
         top:0;
