@@ -4,64 +4,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Willow Bumble">
-    <title>Cosmic Mumbles</title>
+    <title id="head-title">Cosmic Mumbles</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="/img/siderealismlogo-32.png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <script>
+        let currentPath = `${window.location.hostname} \n ${window.location.pathname}`;
+        // let pageTitle = `${getElementsByid('head-title').textContent}`;
+        fetch('hyperloom.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('hyperloom').innerHTML = data;
+            document.getElementById('hl-titlebox').textContent = currentPath;
+          });
+        
+        
+      </script>
 </head>
 <!-- this is a comment btw -->
-
 <body>
-    <div id="space">
-        <div class="stars"></div>
+    <div id="hyperloom">
+<!--Hyperloom goes here-->
     </div>
-    <div class="hyperloom">
-        <header>
-            <div class="hl-blue">
-                <div class="hl-titlebox">
-                    siderealism.space/cosmicmumbles.html
-                </div>
-            </div>
-            <div class="hl-yellow">
-                <a class="imglink" href="index.html">
-                    <img class="hllogo" 
-                    src="img/siderealismlogo-128.png" 
-                    alt="Siderealism Logo" />
-                </a>
-            </div>
-        </header>
-        <div class="hl-red">
-            <nav>
-                These are Links<br>
-            <button class= "hlbuttred" onclick="window.location.href='index.html'">What is Siderealism?</button>
-            <br>
-            <button class= "hlbuttred" onclick="window.location.href='siderealstore.html'">Store</button>
-            <br>
-            <button class= "hlbuttred" onclick="window.location.href='clothgallery.html'">Clothe Gallery</button>
-            <button class= "hlbuttred" onclick="window.location.href='siderealtshirts.html'">Sidereal T-shirts</button>
-            <br>
-            <button class= "hlbuttred" onclick="window.location.href='art.html'">Art</button>
-            <br>
-            <button class= "hlbuttred" onclick="window.location.href='music.html'">Music</button>
-            <button class= "hlbuttred" onclick="window.location.href='lyrics.html'">Lyrics</button>
-            <br>
-            <button class= "hlbuttred" onclick="window.location.href='poetry.html'">Poetry</button>
-            <button class= "hlbuttred" onclick="window.location.href='concepts.html'">Concepts</button>
-            <br>
-            <button class= "hlbuttred" onclick="window.location.href='friends.html'">Friends</button>
-            <br>
-        </nav>
-        </div>
-        <div class="hl-green">
-            This is a green box. This site is in development. Expect it to change!
-        </div>
-    </div>
-    <div class="hyperweave">
+<div id="hyperweave">
+    <div id="hwborder"></div>
+    <div id="hwbackground">
         <div class="hwtextbox">
-            <h1>Cosmic Mumbles</h1>
+            <h1 id="page-title">Cosmic Mumbles</h1>
             <h2>
-                This is
+                This is really
             </h2>
+            <h3>
+                Somewhat|Encoding: "or something"
+            </h3>
             <p>
                 The poetry bit
             </p>
@@ -77,9 +52,16 @@
                 <img src="img/spaced.png" alt="Spaced"/>
             </div>
         </div>
-        
     </div>
-    <div class="hwborder"></div>
+</div>
+<div id="space">
+    <div class="stars"></div>
+</div>  
 </body>
-
 </html>
+
+
+
+
+
+

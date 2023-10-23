@@ -1,5 +1,8 @@
+* {
+    border:0;
+    padding: 0;
+}
 
-/*this is a commment */
 :root{
 /* Sidereal Colours 5000 color palette */
 /* VIOLT */
@@ -26,13 +29,18 @@
 --BLUE-ZAP: #020bfe;
 --BLUE-PASTL: #82a7f4;
 --BLUE-HLITE: #61bbff;
+--BLUE-HLITE-075: rgba(97, 187, 255,0.75);
+--BLUE-HLITE-05: rgba(97, 187, 255,0.5);
 --BLUE-LITE: #0284f8;
+--BLUE-LITE-05: rgba(22, 69, 220,0.5);
 --BLUE-HMED: #1645dc;
+--BLUE-HMED-05: rgba(22, 69, 220,0.5);
 --BLUE-LMED: #101fbb;
 --BLUE-LMED-05:rgba(16, 31, 187, 0.5);
 --BLUE-DARK: #100064;
 --BLUE-DARK-05: rgba(16, 0, 100, 0.5);
 --BLUE-LDARK: #030030;
+--BLUE-LDARK-05: rgba(3, 0, 48,0);
 
 /* AZURE */
 --AZURE-ZAP: #00f3ff;
@@ -48,8 +56,10 @@
 --GREEN-ZAP: #62f50c;
 --GREEN-PASTL: #81bb6f;
 --GREEN-HLITE: #49e109;
+--GREEN-HLITE-075: rgba(73, 225, 9, 0.75);
 --GREEN-HLITE-05:rgba(73, 225, 9, 0.5);
 --GREEN-LITE: #3cc912;
+--GREEN-LITE-075: rgba(60, 201, 18, 0.5);
 --GREEN-LITE-05: rgba(60, 201, 18, 0.5);
 --GREEN-HMED: #00a32c;
 --GREEN-HMED-05: rgba(0, 163, 44, 0.5);
@@ -75,6 +85,7 @@
 --YELLW-HLITE: #f6e600;
 --YELLW-HLITE-05: rgba(246, 230, 0, 0.5);
 --YELLW-LITE: #d8be02;
+--YELLW-LITE-075: rgba(216, 190, 2, 0.75);
 --YELLW-LITE-05: rgba(216, 190, 2, 0.5);
 --YELLW-HMED: #9e8600;
 --YELLW-HMED-05: rgba(158, 134, 0, 0.5);
@@ -99,8 +110,10 @@
 --RED-HLITE: #fd8f7b;
 --RED-HLITE-05:rgba(253, 143, 123, 0.5);
 --RED-LITE: #f03024;
+--RED-LITE-075: rgba(240, 48, 36, 0.75);
 --RED-LITE-05: rgba(240, 48, 36, 0.5);
 --RED-HMED: #c7101a;
+--RED-HMED-075: rgba(199, 16, 26, 0.75);
 --RED-HMED-05: rgba(199, 16, 26, 0.5);
 --RED-LMED: #810510;
 --RED-LMED-05: rgba(129, 5, 16, 0.5);
@@ -127,41 +140,34 @@
 --GREY-LMED: #434343;
 --GREY-DARK: #1e1e1e;
 --GREY-LDARK: #0a0a0a;
+
+--BLACK-A: rgba(0, 0, 0,0);
 }
 
-/* Orientation independant*/
-
-body {
-    width: 100%;
-    height: 100%;
-    background: black;
-    color:var(--GREY-HLITE);
-    font-family:'DejaVu Sans Mono','Consolas','Roboto Mono','Menlo-Regular','Lucida Console',monospace;
-    font-size:calc(1rem + 1.5vw);
-    overflow-wrap: break-word;
-}
 
 /* Stars 
 ------------------------------------- */
 
 #space, .stars {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+    display: fixed;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .stars {
-  background-image: 
-  url(../img/starsim.gif);
-  background-size:cover;
-  background-repeat:repeat;
-  background-position:center;
+    display: block;
+    position: fixed;
+    background-image: 
+    url(../img/starsim.gif);
+    background-size:cover;
+    background-repeat:repeat;
+    background-position:center;
 
 }
-
 
 a:link{
 color:var(--BLUE-HMED);
@@ -180,43 +186,438 @@ a:active{
     var(--BLUE-HLITE) 0 0 5px,
     var(--BLUE-HLITE) 0 0 5px;
 }
-
-h1 {
-    position: relative;
-    text-align: center;
+/* 1.618 2.618 4.236 6.854*/
+body #hyperweave #hwbackground .hwtextbox h1 {
+    font-size: 4.236em;
     background-color: var(--BLUE-LMED-05);
     border-radius: 5.573%;
+    color: var(--RED-HMED-05);
 }
 
-h2 {
-    position: relative;
-    text-align: center;
-    background-color: var(--BLUE-LMED-05);
+body #hyperweave #hwbackground .hwtextbox h2 {
+    font-size: 2.618em;
+    background-color: var(--BLUE-DARK-05);
     border-radius: 5.573%;
+    color: var(--YELLW-LITE-075);
 }
-p {
-    display: inline-flex;
-    position: relative;
-    justify-content: center;
-    align-self: center;
-    text-align: center;
-    background-color: var(--BLUE-LMED-05);
+
+body #hyperweave #hwbackground .hwtextbox h3 {
+    font-size: 1.618em;
+    background-color: var(--BLUE-DARK-05);
+    border-radius: 5.573%;
+    color: var(--GREEN-HLITE-075);
+}
+body #hyperweave #hwbackground .hwtextbox p {
+    background-color: var(--BLUE-DARK-05);
     border-radius: 5.573%;
     box-decoration-break: clone;
+    color: var(--BLUE-HLITE);
 }
 
-.highlight {
+body #hyperweave #hwbackground .hwtextbox .highlight {
     color:var(--RED-HMED);
 }
 
 .box {
-    background-color: var(--BLUE-LMED-05);
-    border: 5px solid var(--BLUE-HMED);
+    background-color: var(--BLUE-DARK-05);
+    border: 5px solid var(--BLUE-LMED);
     border-radius: 5.573%;
 }
 
-/*Hyperloom bits */
+/*---------------------------------------------------------------------------------------*/
+ /*14.59 23.607 61.803 38.197*/
 
+/* ____body____*/
+
+body {
+    display: grid;
+    position: fixed;
+    background: black;
+    color:var(--GREY-HLITE);
+    font: white;
+    font-family:'DejaVu Sans Mono','Consolas','Roboto Mono','Menlo-Regular','Lucida Console',monospace;
+    font-size: 100%;
+    margin: 0;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/* ____Nested under body (in HTML)____*/
+
+body #hyperloom {
+    font-size: 1em;
+    display: grid;
+    z-index: 600;
+    position: unset;
+}
+
+body #hyperweave { 
+    font-size: 1em;
+    position: unset;
+    z-index: 450;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+
+/* ____Nested under hyperloom (in HTML)____*/
+
+body #hyperloom #hl-green {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    border: 5px solid var(--GREEN-LITE);
+    border-radius: 1em 1em 0 0;
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+body #hyperloom #hl-red {
+    position: inherit;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 1em;
+    border: 5px solid var(--RED-HMED);
+    border-radius: 5.573%;
+    padding: 5px;
+    background: radial-gradient(ellipse at top left,
+    var(--BLACK-A)23.607%, 
+    var(--RED-DARK-05)38.197%, 
+    var(--RED-LMED-05) 61.803%, 
+    var(--BLACK-A) 100%);
+ /*14.59 23.607 61.803 38.197*/
+}
+
+/* ____Hyperloom Red Bits____*/
+
+body #hyperloom #hl-red nav {
+    position: inherit;
+    font-size:1em;
+    height: auto;
+    width: auto;
+    max-width:100%;
+    max-height: 100%;
+    overflow:scroll;
+}
+
+body #hyperloom #hl-red p {
+    text-align: center;
+    text-justify: center;
+    width: 100%;
+    height: 1em;
+    font-size: 1em;
+    padding: 0.25em;
+    margin: 0em;
+    border-radius: 0.38em;
+    background-color:var(--RED-LMED-05);
+    border: 3px solid var(--RED-HMED-05);
+}
+
+body #hyperloom #hl-red nav .hlbuttred:hover {
+    background-color:var(--RED-LITE-05);
+    border: 3px solid var(--RED-HLITE-05);
+}
+
+body #hyperloom #hl-red nav .hlbuttred {
+    background-color:var(--RED-HMED-05);
+    border: 3px solid var(--RED-LITE-05);
+    color: var(--RED-HLITE);
+    width: auto;
+    height: 5em;
+    padding: 0.25em;
+    margin: 0.25em;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 0.62em;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+body #hyperloom header {
+    display: grid;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+
+/* ____Nested under header (in HTML)____*/
+
+body #hyperloom header #hl-blue {
+    font-size:1em;
+    overflow: hidden;
+    padding: 6px;
+    border: 6px solid var(--BLUE-LMED);
+    padding-left: 15px;
+    border-radius: 1em 0 0 0;
+    border-width: 5px;
+    border-style:dotted;
+    background: radial-gradient(ellipse at bottom right,
+    var(--BLACK-A) 0%,
+    var(--BLUE-DARK-05)  38.197%, 
+    var(--BLUE-LITE-05) 61.803%, 
+    var(--BLACK-A) 100%);
+     /*14.59 23.607 61.803 38.197*/
+}
+
+body #hyperloom header #hl-yellow {
+    border: 5px solid var(--YELLW-LITE);
+    padding: 5%;
+    font-size: 1em;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+
+/* ____Nested under hyperweave (in HTML)____*/
+
+body #hyperweave #hwborder{
+    border: 9px double var(--BLUE-DARK);
+    outline: 5px solid var(--BLUE-LMED);
+    outline-offset:-6px;
+    outline-style: dotted;
+    pointer-events: none;
+    z-index: 450;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    border-radius: 1em 1em 1em 1em;
+}
+
+body #hyperweave #hwbackground{ 
+    font-size:1em;
+    z-index: 400;
+    overflow:scroll;
+    border-radius: 1em;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding: 1em;
+    text-align: center;
+    /* background-image: url(../img/floater.png);
+    background-size:contain;
+    background-repeat: repeat;
+    background-position:top;
+    background-attachment:scroll,local;  */
+}
+
+body #hyperweave #hwbackground .hwtextbox{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    overflow: auto;
+    background-color: 0;
+    font-size:1em;
+}
+
+body #hyperweave #hwbackground .hwtextbox .hwimg{
+    display: flex;
+    max-width: 50%;
+    align-items: center;
+    justify-content: center;
+    object-fit:contain;
+    border-radius: 1em;
+    font-size:1em;
+    margin: auto;
+}
+
+body #hyperweave #hwbackground .hwtextbox .hwimgbox{
+    background-color: var(--BLUE-LMED-05);
+    box-sizing:border-box;
+    border-radius: 1em;
+    font-size:1em;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/* ____Hyperloom Blue Bits____*/
+
+
+body #hyperloom header #hl-blue #hl-titlebox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.61803em;
+    padding: 1em;
+    text-align: center;
+    text-justify:distribute;
+    text-align: center;
+}
+/*---------------------------------------------------------------------------------------*/
+
+
+/* ____Hyperloom Yellow Bits____*/
+
+body #hyperloom header #hl-yellow a {
+    display: flex; 
+    height: 100%;
+    width: 5em;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    margin: auto 0 ;
+}
+
+body #hyperloom header #hl-yellow a #hllogo {
+    object-fit: contain;
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto ;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+
+/* LANDSCAPE ORIENTATION */
+
+@media all and (orientation: landscape) {
+    body {
+        grid-template-columns: 61.803dvw 38.197dvw;
+        grid-template-rows: 100dvh;
+    }
+
+    body #hyperloom {
+        grid-template-rows: 14.590dvh 23.607dvh 61.803dvh;
+        grid-template-columns: 38.197% 61.803%;
+    }
+
+    body #hyperloom header {
+        grid-column: 1 / 1;
+        grid-row: 1 / 3;
+        grid-template-rows: 61.803% 38.197%;
+        grid-template-columns: 100%;
+
+    }
+
+    body #hyperloom #hl-red {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        border-radius: 0 0 1em 1em;
+    }
+
+    body #hyperloom #hl-green {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        border: 5px solid var(--GREEN-LITE);
+        border-radius: 0 1em 0 0;
+        background: radial-gradient(ellipse at bottom left,
+        var(--BLACK-A) 23.607%, 
+        var(--GREEN-HMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+        /*14.59 23.607 61.803 38.197*/
+    }
+
+    body #hyperloom header #hl-blue {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    
+    body #hyperloom header #hl-yellow {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background: radial-gradient(ellipse at top right,
+        var(--BLACK-A) 0%, 
+        var(--YELLW-LMED-05) 38.197%, 
+        var(--YELLW-HMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+        overflow: hidden;
+    }
+
+    body #hyperweave #hwbackground {
+        background: radial-gradient(ellipse at top right,
+        var(--BLACK-A)  38.197%, 
+        var(--BLUE-DARK-05) 61.803%, 
+        var(--BLACK-A) 100%);
+    }
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+
+/* PORTRAIT ORIENTATION */
+
+@media all and (orientation: portrait) {
+    body {
+        grid-template-rows: 61.803dvh 38.197dvh;
+        grid-template-columns: 100dvw;
+    }
+
+    body #hyperloom{
+        grid-template-columns: 38.197% 61.803%;
+        grid-template-rows: 38.197% 61.803%; 
+    }
+
+    body #hyperloom header {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        grid-template-rows: 100%;
+        grid-template-columns: 61.803% 38.197%;
+    }
+
+    body #hyperloom #hl-red {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+        border-radius: 1em 1em 1em 0;
+
+    }
+
+    body #hyperloom #hl-green {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        border-radius: 0 0 0 1em ;
+        background: radial-gradient(ellipse at top right,
+        var(--BLACK-A) 23.607%, 
+        var(--GREEN-HMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+        /*14.59 23.607 61.803 38.197*/
+    }
+
+    body #hyperloom header #hl-blue {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+    
+    body #hyperloom header #hl-yellow {
+        max-width: 100%;
+        max-height: 100%;
+        grid-template-columns: 38.197% 61.803%;
+        grid-template-rows: 100%;
+        border-radius:0 0 0 0 ;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        border-radius: 0 1em 0 0;
+        background: radial-gradient(ellipse at bottom left,
+        var(--BLACK-A) 0%, 
+        var(--YELLW-LMED-05) 38.197%, 
+        var(--YELLW-HMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+    }
+
+
+    body #hyperweave #hwbackground {
+        background: radial-gradient(ellipse at bottom left,
+        var(--BLACK-A)  38.197%, 
+        var(--BLUE-DARK-05) 61.803%, 
+        var(--BLACK-A) 100%);
+    }
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+
+/* ____Bits n bobs____*/
 
 .tri-yel-left {
     width: 0;
@@ -234,337 +635,6 @@ p {
     border-left: 40px solid var(--YELLW-LITE);
     border-bottom: 13px solid transparent;
     float: left;
-}
-
-.imglink {
-    position: fixed;
-    min-height: calc(14.590dvh - 20px);
-    max-height: calc(14.590dvh - 20px);
-    min-width: calc(14.590dvw - 20px);
-    max-width: calc(14.590dvw - 20px);
-    object-fit:contain;
- 
-}
-
-.hllogo{
-    position: fixed;
-    min-height: calc(14.590dvh - 20px);
-    max-height: calc(14.590dvh - 20px);
-    min-width: calc(14.590dvw - 20px);
-    max-width: calc(14.590dvw - 20px);
-    object-fit:contain;
-}
-
-.hl-titlebox {
-    font-size: 16px;
-    }
-
-  .hlbuttred:hover {
-    background-color:var(--RED-LITE);
-    border: 3px solid var(--RED-HLITE);
-  }
-
-  .hlbuttred {
-    background-color:var(--RED-HMED);
-    border: 3px solid var(--RED-LITE);
-    color: black;
-    padding: 3px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 14.590%;
-  }
-
-/* Hyperweave bits */
+} 
 
 
-.hwimg{
-    display: block;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    position: relative;
-    object-fit: contain;
-}
-
-.hwtextbox{
-    display: inline-flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: center;
-    align-self: center;
-    text-align: center;
-    border-radius: 5.573%;
-    box-sizing: border-box;
-}
-
-.hwimgbox{
-    position: relative;
-    background-color: var(--BLUE-LMED-05);
-    box-sizing:border-box;
-    border-radius: 5.573%;
-}
-
-
-.hwtextbackg{
-    background-color: var(--BLUE-LMED-05);
-    border-radius: 5.573%;
-}
-
-/* LANDSCAPE ORIENTATION */
-
-@media all and (orientation: landscape) {
-    .hyperloom{
-        max-width: 38.197dvw;
-        min-width: 38.197dvw;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color:none;
-        position: fixed;
-        top: 0;
-        right: 0px;
-        bottom: 0px;
-        z-index: 600;
-    }
-
-    header{
-        max-width: 38.197dvw;
-        min-width: 38.197dvw;
-        min-height: 38.197dvh;
-        max-height: 38.197dvh;
-        position: fixed;
-    }    
-
-    .hl-blue {
-        position: fixed;
-        min-width: calc(23.607dvw - 20px);
-        max-width: calc(23.607dvw - 20px);
-        min-height: calc(14.590dvh - 20px);
-        max-height: calc(14.590dvh - 20px);
-        padding: 5px;
-        border: 5px solid var(--BLUE-LMED);
-        border-left-style: none;
-        padding-left: 15px;
-        background-color: var(--BLUE-LMED-05);
-        top: 23.607dvh;
-        right: 14.590dvw;
-    }
-
-    .hl-yellow {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: calc(14.590dvw - 10px);
-        max-width: calc(14.590dvw - 10px);
-        min-height: calc(14.590dvh - 10px);
-        max-height: calc(14.590dvh - 10px);
-        top: 23.607dvh;
-        right: 0;
-        border: 5px solid var(--YELLW-LITE);
-        background-color: var(--YELLW-LITE-05);
-    
-    }
-
-    .hl-green {
-        min-height: calc(23.607dvh - 20px);
-        max-height: calc(23.607dvh - 20px);
-        min-width: calc(38.197dvw - 20px);
-        max-width: calc(38.197dvw - 20px);
-        border: 5px solid var(--GREEN-LITE);
-        border-radius: 5.573% 5.573% 0 0;
-        padding: 5px;
-        position: fixed;
-        top: 0;
-        right: 0;
-        text-align: center;
-        background-color: var(--GREEN-LITE-05);
-    }
-
-    .hl-red {
-        min-height: calc(61.803dvh - 20px);
-        max-height: calc(61.803dvh - 20px);
-        min-width: calc(38.197dvw - 20px);
-        max-width: calc(38.197dvw - 20px);
-        border: 5px solid var(--RED-HMED);
-        border-radius: 5.573%;
-        padding: 5px;
-        position: fixed;
-        top: 38.197dvh;
-        border-radius: 0 0 5.573% 5.573%;
-        text-align: center;
-        background-color: var(--RED-HMED-05);
-    }
-
-    .hyperweave{ /*container*/
-        max-width: 61.803dvw;
-        min-width: 61.803dvw;
-        height: 100%;
-        overflow: scroll;
-        position: absolute;
-        background: none;
-        left:0;
-        top:0;
-        z-index: 450;
-        /*think about tiling backgrounf*/
-        /*use min max width */
-    }
-
-    .hwbackground{ 
-        max-width: 61.803dvw;
-        min-width: 61.803dvw;
-        height: 100%;
-        position: absolute;
-        left:0;
-        top:0;
-        z-index: 400;
-    /*    background-image: url(../img/floater.png);
-        background-size:contain;
-        background-repeat: repeat;
-        background-position:top;
-        background-attachment:scroll,local;
-    */
-        /*think about tiling backgrounf*/
-        /*use min max width */
-    }
-
-    .hwborder{
-        max-width: calc(61.803dvw - 18px);
-        min-width: calc(61.803dvw - 18px);
-        height: auto;
-        left:0;
-        top:0;
-        bottom:0;
-        border: 9px double var(--BLUE-DARK);
-        border-radius: 5.573%;
-        outline: 3px solid var(--BLUE-LMED);
-        outline-offset:-6px;
-        outline-style: solid;
-        position: fixed;
-        pointer-events: none;
-        z-index: 500;
-    }
-}
-
-/* PORTRAIT ORIENTATION */
-@media all and (orientation: portrait) {
-    .hyperloom{
-        max-height: 38.197dvh;
-        min-height: 38.197dvh;
-        width: 100%;
-        background-color:none;
-        position: fixed;
-        left: 0;
-        right: 0px;
-        bottom: 0px;
-        z-index: 600;
-    }
-
-    header{
-        position: fixed;
-        min-height: 38.197dvh;
-        max-height: 38.197dvh;
-        min-width: 38.197dvw;
-        max-width: 38.197dvw;
-    }    
-
-    .hl-blue {
-        position: fixed;
-        min-height: calc(23.607dvh - 10px);
-        max-height: calc(23.607dvh - 10px);
-        min-width: calc(14.590dvw - 20px);
-        max-width: calc(14.590dvw - 20px);
-        padding: 5px;
-        border: 5px solid var(--BLUE-LMED);
-        border-top-style: none;
-        padding-top: 6px;
-        background-color: var(--BLUE-LMED-05);
-        left: 23.607dvw;
-        bottom: 14.590dvh;
-    }
-
-    .hl-yellow {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: calc(14.590dvh - 10px);
-        max-height: calc(14.590dvh - 10px);
-        min-width: calc(14.590dvw - 10px);
-        max-width: calc(14.590dvw - 10px);
-        border: 5px solid var(--YELLW-LITE);
-        background-color: var(--YELLW-LITE-05);
-        bottom: 0;
-        left: 23.607dvw;
-    }
-
-    .hl-green {
-        min-width: calc(23.607dvw - 20px);
-        max-width: calc(23.607dvw - 20px);
-        min-height: calc(38.197dvh - 20px);
-        max-height: calc(38.197dvh - 20px);
-        border: 5px solid var(--GREEN-LITE);
-        border-radius: 5.573% 0 0 5.573%;
-        padding: 5px;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        text-align: center;
-        background-color: var(--GREEN-LITE-05);
-    }
-
-    .hl-red {
-        min-width: calc(61.803dvw - 20px);
-        max-width: calc(61.803dvw - 20px);
-        min-height: calc(38.197dvh - 20px);
-        max-height: calc(38.197dvh - 20px);
-        border: 5px solid var(--RED-HMED);
-        border-radius: 5.573%;
-        padding: 5px;
-        position: fixed;
-        left: 38.197dvw;
-        bottom: 0;
-        border-radius: 0 5.573% 5.573% 0;
-        text-align: center;
-        background-color: var(--RED-HMED-05);
-    }
-
-
-
-    .hyperweave{ /*container*/
-        max-height: 61.803dvh;
-        min-height: 61.803dvh;
-        width: 100%;
-        overflow: scroll;
-        position: absolute;
-        left:auto;
-        right: auto;
-        top:0;
-        z-index: 450;
-        /*think about tiling backgrounf*/
-        /*use min max width */
-    }
-
-    .hwborder{
-        max-height: calc(61.803dvh - 18px);
-        min-height: calc(61.803dvh - 18px);
-        width: auto;
-        left:0;
-        top:0;
-        right:0;
-        border: 9px double var(--BLUE-DARK);
-        border-radius: 5.573%;
-        outline: 3px solid var(--BLUE-LMED);
-        outline-offset:-6px;
-        outline-style: solid;
-        position: fixed;
-        pointer-events: none;
-        z-index: 500;
-    }
-}
-
-/*
-
-*/
