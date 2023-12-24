@@ -1,0 +1,23 @@
+#space, .stars {
+
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .stars {
+    display: block;
+    position: fixed;
+    background-image: 
+    url(../img/starsim.gif);
+    background-size:cover;
+    background-repeat:repeat;
+    background-position:center;
+
+  }

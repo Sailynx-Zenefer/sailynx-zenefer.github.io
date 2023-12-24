@@ -1,0 +1,21 @@
+
+/*---------------------------------------------------------------------------------------*/
+/*14.59 23.607 61.803 38.197*/
+
+/* ____body____*/
+
+
+
+body {
+  display: grid;
+  position: fixed;
+  background: black;
+  color:var(--GREY-HLITE);
+  font: white;
+  font-family:'DejaVu Sans Mono','Consolas','Roboto Mono','Menlo-Regular','Lucida Console',monospace;
+  font-size: 100%;
+  margin: 0;
+}
+
+/*---------------------------------------------------------------------------------------*/
+

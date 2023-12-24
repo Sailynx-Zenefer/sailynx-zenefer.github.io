@@ -1,0 +1,132 @@
+.hw-page h1 {
+  font-size: 4.236em;
+  background-color: var(--BLUE-LMED-05);
+  border-radius: 5.573%;
+  color: var(--RED-HMED-05);
+}
+
+.hw-page h2 {
+  font-size: 2.618em;
+  background-color: var(--BLUE-DARK-05);
+  border-radius: 5.573%;
+  color: var(--YELLW-LITE-075);
+}
+
+.hw-page h3 {
+  font-size: 1.618em;
+  background-color: var(--BLUE-DARK-05);
+  border-radius: 5.573%;
+  color: var(--GREEN-HLITE-075);
+}
+.hw-page p {
+  background-color: var(--BLUE-DARK-05);
+  border-radius: 5.573%;
+  box-decoration-break: clone;
+  color: var(--BLUE-HLITE);
+}
+
+.hw-page .highlight {
+  color:var(--RED-HMED);
+}
+
+.box {
+  background-color: var(--BLUE-DARK-05);
+  border: 5px solid var(--BLUE-LMED);
+  border-radius: 5.573%;
+}
+
+
+
+#hyperweave { 
+  font-size: 1em;
+  position: relative;
+  z-index: 450;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+/* ____Nested under hyperweave ____*/
+
+#hyperweave > #hwborder{
+  border: 9px double var(--BLUE-DARK);
+  outline: 5px solid var(--BLUE-LMED);
+  outline-offset:-6px;
+  outline-style: dotted;
+  pointer-events: none;
+  z-index: 450;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  border-radius: 1em 1em 1em 1em;
+}
+
+#hyperweave > #hwbackground{ 
+  font-size:1em;
+  z-index: 400;
+  overflow:scroll;
+  border-radius: 1em;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding: 1em;
+  text-align: center;
+  /* background-image: url(../img/floater.png);
+  background-size:contain;
+  background-repeat: repeat;
+  background-position:top;
+  background-attachment:scroll,local;  */
+}
+
+.hw-page{
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  overflow: auto;
+  background-color: 0;
+  font-size:1em;
+}
+
+#hwimgbox > img{
+  width: 85.41%;
+  height: 85.41%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit:contain;
+  border-radius: 1em;
+  font-size:1em;
+  margin: auto;
+}
+
+#hwimgbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--BLUE-LMED-05);
+  box-sizing:border-box;
+  width:76.393%;
+  height:auto;
+  padding: auto;
+  margin: auto;
+  border-radius: 1em;
+  font-size:1em;
+}
+
+@media all and (orientation: portrait) {
+  #hyperweave #hwbackground {
+      background: radial-gradient(ellipse at bottom left,
+      var(--BLACK-A)  38.197%, 
+      var(--BLUE-DARK-05) 61.803%, 
+      var(--BLACK-A) 100%);
+  }
+}
+
+@media all and (orientation: landscape) {
+  #hyperweave #hwbackground {
+      background: radial-gradient(ellipse at top right,
+      var(--BLACK-A)  38.197%, 
+      var(--BLUE-DARK-05) 61.803%, 
+      var(--BLACK-A) 100%);
+  }
+}
+

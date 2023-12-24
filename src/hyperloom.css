@@ -1,0 +1,294 @@
+#hyperloom {
+    font-size: 1em;
+    display: grid;
+    z-index: 600;
+    position: relative;
+  }
+
+
+/* ____Nested under hyperloom (in HTML)____*/
+
+#hyperloom > #hl-red {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    border-radius: 1em 1em 0 0;
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+    overflow: hidden;
+  
+  }
+  
+#hyperloom > #hl-yellow {
+    box-sizing: border-box;
+    position: inherit;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 1em;
+    border: 5px solid var(--YELLW-LITE);
+    border-radius: 5.573%;
+    padding: 0;
+    margin: 0;
+  /*14.59 23.607 61.803 38.197*/
+
+  }
+  
+  /* ____Hyperloom Red Bits____*/
+  
+#hl-yellow > nav {
+  box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    position: relative;
+    font-size:1em;
+    height: auto;
+    width: auto;
+    max-width:100%;
+    max-height: 100%;
+    overflow:scroll;
+  }
+  
+#hl-yellow > p, nav > p {
+  color: VAR(--YELLW-ZAP);
+  box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    text-justify: center;
+    flex-flow: column;
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    padding: 5px 0 5px 0;
+    margin: auto;
+    border-radius: 0.38em;
+    background-color:var(--YELLW-LMED-05);
+    border: 3px solid var(--YELLW-HMED-05);
+  }
+  
+.hlbuttyellow:hover {
+    background-color:var(--YELLW-LITE-05);
+    border: 3px solid var(--YELLW-HLITE-05);
+  }
+  
+.hlbuttyellow {
+    background-color:var(--YELLW-HMED-05);
+    border: 3px solid var(--YELLW-LITE-05);
+    color: white;
+    width: auto;
+    height: 5em;
+    padding: 0.25em;
+    margin: 0.25em;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 0.62em;
+  }
+  
+  /*---------------------------------------------------------------------------------------*/
+  
+#hyperloom > header {
+    display: grid;
+  }
+  
+  /*---------------------------------------------------------------------------------------*/
+  
+  
+  /* ____Nested under header (in HTML)____*/
+  
+#hyperloom > header > #hl-blue {
+    font-size:1em;
+    overflow: hidden;
+    padding: 6px;
+    border: 6px solid var(--BLUE-LMED);
+    padding-left: 15px;
+    border-radius: 1em 0 0 0;
+    border-width: 5px;
+    border-style:dotted;
+    background: radial-gradient(ellipse at bottom right,
+    var(--BLACK-A) 0%,
+    var(--BLUE-DARK-05)  38.197%, 
+    var(--BLUE-LITE-05) 61.803%, 
+    var(--BLACK-A) 100%);
+     /*14.59 23.607 61.803 38.197*/
+  }
+  
+  #hyperloom > header > #hl-green {
+  border: 5px solid var(--GREEN-LITE);
+    padding: 5%;
+    font-size: 1em;
+  }
+  
+  /*---------------------------------------------------------------------------------------*/
+  
+  /* ____Hyperloom Blue Bits____*/
+
+
+#hyperloom > header > #hl-blue > #hl-titlebox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.61803em;
+    padding: 1em;
+    text-align: center;
+    text-justify:distribute;
+    text-align: center;
+  }
+  /*---------------------------------------------------------------------------------------*/
+  
+  
+  /* ____Hyperloom green Bits____*/
+  
+  .hl-link{
+    display: flex; 
+    height: 100%;
+    width: 5em;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    margin: auto 0 ;
+  }
+  
+  #hllogo {
+    object-fit: contain;
+    display: block;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto ;
+  }
+  
+  /*---------------------------------------------------------------------------------------*/
+  /* LANDSCAPE ORIENTATION */
+
+  @media all and (orientation: landscape) {
+    #hyperloom {
+        grid-template-rows: 14.590dvh 23.607dvh 61.803dvh;
+        grid-template-columns: 38.197% 61.803%;
+    }
+  
+    #hyperloom > header {
+        grid-column: 1 / 1;
+        grid-row: 1 / 3;
+        grid-template-rows: 61.803% 38.197%;
+        grid-template-columns: 100%;
+  
+    }
+  
+    #hyperloom > #hl-yellow {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        border-radius: 0 0 1em 1em;
+        background: radial-gradient(ellipse at top left,
+        var(--BLACK-A) 0%, 
+        var(--YELLW-LMED-05) 38.197%, 
+        var(--YELLW-HMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+    }
+  
+    #hyperloom > #hl-red {
+
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        border-radius: 0 1em 0 0;
+        /*14.59 23.607 61.803 38.197*/
+
+        background: radial-gradient(ellipse at bottom left,
+        var(--BLACK-A)23.607%, 
+        var(--RED-DARK-05)38.197%, 
+        var(--RED-LMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+        border: 5px solid var(--RED-HMED);
+    }
+  
+    #hyperloom > header > #hl-blue {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    
+    #hl-green {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(ellipse at top right,
+        var(--BLACK-A) 23.607%, 
+        var(--GREEN-HMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+        overflow: hidden;
+    }
+  }
+  
+  /*---------------------------------------------------------------------------------------*/
+  
+  /* PORTRAIT ORIENTATION */
+
+@media all and (orientation: portrait) {
+
+    #hyperloom{
+        grid-template-columns: 38.197% 61.803%;
+        grid-template-rows: 38.197% 61.803%; 
+    }
+  
+    #hyperloom > header {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        grid-template-rows: 100%;
+        grid-template-columns: 61.803% 38.197%;
+    }
+  
+    #hyperloom > #hl-yellow {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+        border-radius: 1em 1em 1em 0;
+        background: radial-gradient(ellipse at bottom right,
+        var(--BLACK-A) 0%, 
+        var(--YELLW-LMED-05) 38.197%, 
+        var(--YELLW-HMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+    }
+  
+    #hyperloom > #hl-red {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        border-radius: 0 0 0 1em ;
+        background: radial-gradient(ellipse at top right,
+        var(--BLACK-A)23.607%, 
+        var(--RED-DARK-05)38.197%, 
+        var(--RED-LMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+        /*14.59 23.607 61.803 38.197*/
+        border: 5px solid var(--RED-HMED);
+    }
+  
+    #hyperloom > header > #hl-blue {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+    
+    #hl-green {
+        max-width: 100%;
+        max-height: 100%;
+        grid-template-columns: 38.197% 61.803%;
+        grid-template-rows: 100%;
+        border-radius:0 0 0 0 ;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        border-radius: 0 1em 0 0;
+        border: 5px solid var(--GREEN-LITE);
+        background: radial-gradient(ellipse at bottom left,
+        var(--BLACK-A) 23.607%, 
+        var(--GREEN-HMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+
+    }
+}
+  /*---------------------------------------------------------------------------------------*/
+  
+  
