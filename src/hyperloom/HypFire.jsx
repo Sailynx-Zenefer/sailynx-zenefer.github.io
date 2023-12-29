@@ -2,7 +2,7 @@
 
 export default function HypFire() {
     return (
-            <div id={"hl-red"}>
+            <div id={"hyp-fire"}>
             This is a post box. This site is in development. Expect it to change!
           </div>
     )

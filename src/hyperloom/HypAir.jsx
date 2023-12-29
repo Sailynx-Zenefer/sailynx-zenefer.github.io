@@ -5,7 +5,7 @@ export default function HypAir() {
     const hwPath = '/hyperweave/'
 
 return (
-    <div id="hl-yellow">
+    <div id="hyp-air">
     <p>{"(navigate to ("}</p>
     <nav>
         <HypAirLink endpoint={`${hwPath}siderealism`} linkText={'(siderealism is (what?))'}/>

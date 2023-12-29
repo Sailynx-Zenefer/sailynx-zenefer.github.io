@@ -1,15 +1,11 @@
-import {useState} from 'react'
 
-export default function Hyperloom({ children }) {
-  const [isBig, setIsBig] = useState(false);
 
-  const toggleBig = () => setIsBig((currBig) => !currBig);
+export default function Hyperloom({ children, hyperloomBig}) {
 
   return (
-    <div id={"hyperloom"}>
-      {/* <button onClick={toggleBig}>{isBig ? "Small" : "Big"}</button> */}
-      {!isBig && children}
+    <div id={hyperloomBig ? "hyperloom-big" : "hyperloom"}>
+      {children}
     </div>
   );
 }
-
+ 

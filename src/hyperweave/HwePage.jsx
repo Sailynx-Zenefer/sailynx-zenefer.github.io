@@ -4,8 +4,8 @@ import HwePageGen from "./page-bits/HwePageGen.mdx";
 import { MDXProvider } from "@mdx-js/react";
 const pages = import.meta.glob("./pages/*.mdx", { eager: true });
 const wbPages = import.meta.glob("./pages/willow-bumble/*.mdx", { eager: true });
-const szPages = import.meta.glob("./pages/sailyx-zenefer/*.mdx", { eager: true });
-const pbPages = import.meta.glob("./pages/psytrus-beeshine*.mdx", { eager: true });
+const szPages = import.meta.glob("./pages/sailynx-zenefer/*.mdx", { eager: true });
+const pbPages = import.meta.glob("./pages/psytrus-beeshine/*.mdx", { eager: true });
 
 export default function HwePage() {
   const [currPage, setCurrPage] = useState({

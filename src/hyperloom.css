@@ -1,26 +1,29 @@
-#hyperloom {
+#hyperloom, #hyperloom-big {
     font-size: 1em;
     display: grid;
     z-index: 600;
     position: relative;
   }
 
+  #hyp-subdiv {
+    display: grid;
+    box-sizing: border-box;
+  }
 
-/* ____Nested under hyperloom (in HTML)____*/
+  #hyp-water, #hyp-earth, #hyp-fire, #hyp-air {
+    box-sizing: border-box;
+  }
 
-#hyperloom > #hl-red {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-
+#hyp-fire {
     border-radius: 1em 1em 0 0;
     padding: 5px;
     font-size: 1em;
     text-align: center;
     overflow: hidden;
-  
+    border: 5px solid var(--RED-HMED);
   }
   
-#hyperloom > #hl-yellow {
+#hyp-air {
     box-sizing: border-box;
     position: inherit;
     display: flex;
@@ -35,27 +38,25 @@
     padding: 0;
     margin: 0;
   /*14.59 23.607 61.803 38.197*/
+  }
 
-  }
+#hyp-air > nav {
+    box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: row wrap;
+      position: relative;
+      font-size:1em;
+      height: auto;
+      width: auto;
+      max-width:100%;
+      max-height: 100%;
+      overflow:scroll;
+    }
   
-  /* ____Hyperloom Red Bits____*/
   
-#hl-yellow > nav {
-  box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
-    position: relative;
-    font-size:1em;
-    height: auto;
-    width: auto;
-    max-width:100%;
-    max-height: 100%;
-    overflow:scroll;
-  }
-  
-#hl-yellow > p, nav > p {
+#hyp-air > p, nav > p {
   color: VAR(--YELLW-ZAP);
   box-sizing: border-box;
     display: flex;
@@ -72,12 +73,12 @@
     border: 3px solid var(--YELLW-HMED-05);
   }
   
-.hlbuttyellow:hover {
+.hyp-air-button:hover {
     background-color:var(--YELLW-LITE-05);
     border: 3px solid var(--YELLW-HLITE-05);
   }
   
-.hlbuttyellow {
+.hyp-air-button {
     background-color:var(--YELLW-HMED-05);
     border: 3px solid var(--YELLW-LITE-05);
     color: white;
@@ -89,19 +90,12 @@
     font-size: 1em;
     border-radius: 0.62em;
   }
-  
+
   /*---------------------------------------------------------------------------------------*/
   
-#hyperloom > header {
-    display: grid;
-  }
+  /* ____Hyperloom Water Bits____*/
   
-  /*---------------------------------------------------------------------------------------*/
-  
-  
-  /* ____Nested under header (in HTML)____*/
-  
-#hyperloom > header > #hl-blue {
+#hyp-subdiv > #hyp-water {
     font-size:1em;
     overflow: hidden;
     padding: 6px;
@@ -118,18 +112,7 @@
      /*14.59 23.607 61.803 38.197*/
   }
   
-  #hyperloom > header > #hl-green {
-  border: 5px solid var(--GREEN-LITE);
-    padding: 5%;
-    font-size: 1em;
-  }
-  
-  /*---------------------------------------------------------------------------------------*/
-  
-  /* ____Hyperloom Blue Bits____*/
-
-
-#hyperloom > header > #hl-blue > #hl-titlebox {
+#hyp-water > #hl-titlebox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,50 +122,547 @@
     text-justify:distribute;
     text-align: center;
   }
+
   /*---------------------------------------------------------------------------------------*/
   
   
-  /* ____Hyperloom green Bits____*/
-  
-  .hl-link{
-    display: flex; 
-    height: 100%;
-    width: 5em;
-    max-width: 100%;
-    max-height: 100%;
+  /* ____Hyperloom Earth Bits____*/
+#hyp-subdiv > #hyp-earth {
+  display: grid;
+    border: 5px solid var(--GREEN-LITE);
+      padding:5px;
+      font-size: 1em;
+    }
+
+   .hl-link{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    height: auto;
+    max-width: fit-content;
+    width: auto;
+    max-height:fit-content;
     box-sizing: border-box;
-    margin: auto 0 ;
+    margin: 0;
+    padding: 0;
   }
   
-  #hllogo {
+  #hyp-logo {
     object-fit: contain;
     display: block;
-    height: 100%;
+    min-width: none;
+    max-width: none;
+    height: 500px;
+    width:500px;
     max-height: 100%;
     max-width: 100%;
-    margin: 0 auto ;
+    margin: 3px auto auto auto;
+  }
+
+  #hyp-earth > button:hover {
+    box-sizing: border-box;
+    background-color:var(--GREEN-LITE-05);
+    border: 3px solid var(--GREEN-HLITE-05);
   }
   
+  #hyp-earth > button {
+    grid-row: 1 / 2;
+    grid-column: 1/2;
+    box-sizing: border-box;
+    background-color:var(--GREEN-HMED-05);
+    border: 3px solid var(--GREEN-LITE-05);
+    color: var(--GREEN-HLITE);
+    width: auto;
+    height: auto;
+    padding: 0 0.2em 0 0.2em;
+    margin: 0;
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 0.62em;
+  }
+
+  /*---------------------------------------------------------------------------------------*/
+  
+  /* PORTRAIT ORIENTATION */
+
+@media all and (orientation: portrait) {
+
+    #hyperloom, #hyperloom-big{
+        grid-template-columns: 38.197% 61.803%;
+        grid-template-rows: 100%; 
+    }
+  
+
+    #hyperloom > #hyp-subdiv,
+    #hyperloom-big > #hyp-subdiv {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      grid-template-rows: 38.197% 61.803%;
+    }
+
+    #hyperloom > #hyp-subdiv{
+        grid-template-columns: 38.197% 61.803%;
+    }
+
+    #hyperloom-big > #hyp-subdiv {
+        grid-template-columns: 61.803% 38.197%;
+    }
+
+
+#hyperloom > #hyp-swap-glow, #hyperloom-big > #hyp-swap-glow {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      background: radial-gradient(ellipse at center,
+      var(--BLACK-A) 0%, 
+      var(--BLUE-LITE) 38.197%, 
+      var(--BLUE-HMED) 61.803%, 
+      var(--BLACK-A) 100%);
+      border: 9px double var(--BLUE-DARK);
+      outline: 5px solid var(--BLUE-LMED);
+      outline-offset:-6px;
+      outline-style: dotted;
+      top: 0;
+      left: 0;
+      z-index: -100;
+      display: block;
+      opacity: 0;
+    }
+    #hyp-air {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+    }
+
+    #hyperloom > #hyp-air {
+        border-radius: 0em 1em 1em 0;
+        background: radial-gradient(ellipse at top left,
+        var(--BLACK-A) 0%, 
+        var(--YELLW-LMED-05) 38.197%, 
+        var(--YELLW-HMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+    }
+
+    #hyperloom-big > #hyp-air {
+      border-radius: 1em 1em 1em 0;
+      background: radial-gradient(ellipse at top left,
+      var(--BLACK-A) 0%, 
+      var(--YELLW-LMED-05) 38.197%, 
+      var(--YELLW-HMED-05) 61.803%, 
+      var(--BLACK-A) 100%);
+  }
+  
+    #hyperloom > #hyp-subdiv > #hyp-fire {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        border-radius: 0 0 0 0;
+        background: radial-gradient(ellipse at bottom center,
+        var(--BLACK-A)23.607%, 
+        var(--RED-DARK-05)38.197%, 
+        var(--RED-LMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+    }
+
+/*14.59 23.607 61.803 38.197*/
+    #hyperloom-big > #hyp-subdiv > #hyp-fire {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      border-radius: 0 0 0 1em ;
+      background: radial-gradient(ellipse at top right,
+      var(--BLACK-A)23.607%, 
+      var(--RED-DARK-05)38.197%, 
+      var(--RED-LMED-05) 61.803%, 
+      var(--BLACK-A) 100%);
+  }
+  
+    #hyperloom > #hyp-subdiv > #hyp-water {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+        border-radius: 1em;
+        width:0%;
+        height:0%;
+        padding: 0%;
+        border-radius: 1em 0 0 0;
+    }
+    
+    #hyperloom > #hyp-subdiv > #hyp-earth {
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+        border-radius: 1em 0 0 1em;
+        background: radial-gradient(ellipse at top right,
+        var(--BLACK-A) 23.607%, 
+        var(--GREEN-HMED-05) 61.803%, 
+        var(--BLACK-A) 100%);
+
+    }
+    #hyperloom-big > #hyp-subdiv > #hyp-earth {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      border-radius: 0 1em 0 0;
+      background: radial-gradient(ellipse at bottom left,
+      var(--BLACK-A) 23.607%, 
+      var(--GREEN-HMED-05) 61.803%, 
+      var(--BLACK-A) 100%);
+  }
+  #hyp-subdiv > #hyp-earth {
+        grid-template-rows: 38.197% 61.803%;
+        grid-template-columns: 100%;
+      }
+}
+  
+  /*---------------------------------------------------------------------------------------*/
+    
+  
+    @media all and (orientation: portrait) {
+  
+      @keyframes hypSubdivSmaller {
+        0% {
+          grid-template-rows: 38.197% 61.803%;
+          grid-template-columns: 61.803% 38.197%;
+        }
+  
+        50% {
+        }
+  
+        100% {
+          grid-template-columns: 38.197% 61.803%;
+          grid-template-rows: 38.197% 61.803% ;
+        }
+      }
+  
+  
+      @keyframes hypSubdivBigger {
+        0% {
+          grid-template-columns: 38.197% 61.803%;
+          grid-template-rows: 61.803% 38.197% ;
+        }     
+      
+        100% {
+          grid-template-rows: 38.197% 61.803%;
+          grid-template-columns: 61.803% 38.197%;
+          
+        }
+      }
+  
+      @keyframes hypSwapGlowBigger{
+        0% {
+          display: none;
+          opacity: 0;
+        }
+  
+        1% {
+          display: block;
+          opacity: 0;
+        }
+  
+        50% {
+          display: block;
+          opacity: 100%;
+        } 
+  
+        99% {
+          display: block;
+          opacity: 0;
+        }
+  
+        
+        100% {
+          display: none;
+          opacity: 0%;
+        } 
+      }
+  
+      @keyframes hypSwapGlowSmaller{
+        0% {
+          display: none;
+          opacity: 0;
+          
+        }
+  
+        1% {
+          display: block;
+          opacity: 0;
+        }
+  
+        50% {
+          display: block;
+          opacity: 100%;
+        } 
+  
+        99% {
+          display: block;
+          opacity: 0;
+        }
+  
+        
+        100% {
+          display: none;
+          opacity: 0%;
+        } 
+  
+      }
+  
+      @keyframes hyperloomSmaller {
+        0% {
+          grid-template-columns: 38.197% 61.803%;
+          grid-template-rows: 100%; 
+        }
+  
+        100% {
+          grid-template-columns: 38.197% 61.803%;
+          grid-template-rows: 100%; 
+        }
+      }
+  
+      @keyframes hyperloomBigger {
+        0% {
+          grid-template-columns: 38.197% 61.803%;
+          grid-template-rows: 100%; 
+        }
+      
+        100% {
+          grid-template-columns: 38.197% 61.803%;
+          grid-template-rows: 100%; 
+          
+        }
+      }
+  
+      @keyframes hypFireSmaller {
+        0% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(0,61.803%);
+          height:61.803%;
+          width:100%;
+          border-radius: 0 0 0 1em; 
+  
+        }
+  
+        100% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(61.803%,0);
+          height:100%;
+          width:61.803%;
+        }
+      }
+  
+      @keyframes hypFireBigger {
+        0% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(61.803%,0%);
+          width:61.803%;
+          height:100%;
+          border-radius: 0 0 0 0 ;
+        }
+  
+        100% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(0,61.803%);
+          width:100%;
+          height:61.803%;
+          border-radius: 0 0 0 1em ;
+        }
+      }
+  
+      @keyframes hypEarthSmaller {
+        0% {
+          transform: translate(161.803%,0);
+          height:38.197%;
+          width:61.803%;
+          border-radius: 0 1em 0 0 ; 
+  
+        }
+  
+        100% {
+          transform: translate(0,0);
+          height: 100%;
+          width:100%;
+          border-radius: 1em 0 0 1em; 
+        }
+      }
+  
+      @keyframes hypEarthBigger {
+        0% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(0,0);
+          width:38.197%;
+          height:100%;
+          border-radius: 1em 0 0 1em;
+        }
+  
+        100% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(161.803%,0);
+          height:38.197%;
+          width:38.197%;
+        }
+  
+        
+      }
+  
+      @keyframes hypWaterSmaller {
+        0% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          width:61.803%;
+          height:38.197%;
+          border-radius: 1em 0 0 0;
+        }
+  
+        100% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          width:0%;
+          height:0%;
+          padding: 0%;
+          border-radius: 1em 0 0 0;
+          border-width: 0;
+        }
+      } 
+  
+      @keyframes hypWaterBigger {
+        0% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          width:0%;
+          height:0%;
+          border-radius: 1em 0 0 0;
+          border-width: 0;
+        }
+  
+        100% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          width:61.803%;
+          height:38.197%;
+          border-radius: 1em 0 0 0;
+        }
+      }
+  
+  #hyperloom-big > #hyp-swap-glow,
+  #hyperloom> #hyp-swap-glow, 
+  #hyperloom, #hyperloom-big,
+  #hyperloom > #hyp-subdiv,
+  #hyperloom-big > #hyp-subdiv,
+  #hyperloom > #hyp-subdiv > #hyp-fire,
+  #hyperloom-big > #hyp-subdiv > #hyp-fire,
+  #hyperloom > #hyp-subdiv > #hyp-earth,
+  #hyperloom-big > #hyp-subdiv > #hyp-earth,
+  #hyperloom > #hyp-subdiv > #hyp-water,
+  #hyperloom-big > #hyp-subdiv > #hyp-water {
+    animation-duration: 0.3s;
+    animation-timing-function:linear;
+  }
+  
+  #hyperloom {
+    animation-name: hyperloomSmaller;
+  }
+  
+  #hyperloom-big {
+    animation-name: hyperloomBigger;
+  }
+  
+  #hyperloom > #hyp-subdiv {
+    animation-name: hypSubdivSmaller;
+  }
+  
+  
+  #hyperloom-big > #hyp-subdiv {
+    animation-name: hypSubdivBigger;
+  }
+  
+  #hyperloom > #hyp-swap-glow {
+    animation-name: hypSwapGlowBigger;
+  }
+  
+  #hyperloom-big > #hyp-swap-glow{
+    animation-name: hypSwapGlowSmaller;
+  }
+  
+  
+  #hyperloom > #hyp-subdiv > #hyp-fire {
+    animation-name: hypFireSmaller;
+  }
+  
+  
+  #hyperloom-big > #hyp-subdiv > #hyp-fire{
+    animation-name: hypFireBigger;
+  }
+  
+  
+  #hyperloom > #hyp-subdiv > #hyp-earth {
+    animation-name: hypEarthSmaller;
+  }
+  
+  
+  #hyperloom-big > #hyp-subdiv > #hyp-earth{
+    animation-name: hypEarthBigger;
+  }
+  
+  #hyperloom > #hyp-subdiv > #hyp-water {
+    animation-name: hypWaterSmaller;
+  }
+  
+  
+  #hyperloom-big > #hyp-subdiv > #hyp-water{
+    animation-name: hypWaterBigger;
+  }
+}
   /*---------------------------------------------------------------------------------------*/
   /* LANDSCAPE ORIENTATION */
 
+
+
   @media all and (orientation: landscape) {
-    #hyperloom {
-        grid-template-rows: 14.590dvh 23.607dvh 61.803dvh;
-        grid-template-columns: 38.197% 61.803%;
+
+    #hyperloom, #hyperloom-big{
+        grid-template-rows: 38.197% 61.803%;
+        grid-template-columns: 100%; 
     }
   
-    #hyperloom > header {
-        grid-column: 1 / 1;
-        grid-row: 1 / 3;
+
+    #hyperloom > #hyp-subdiv,
+    #hyperloom-big > #hyp-subdiv {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      grid-template-columns: 38.197% 61.803%;
+    }
+
+    #hyperloom > #hyp-subdiv{
+        grid-template-rows: 38.197% 61.803%;
+    }
+
+    #hyperloom-big > #hyp-subdiv {
         grid-template-rows: 61.803% 38.197%;
-        grid-template-columns: 100%;
-  
     }
-  
-    #hyperloom > #hl-yellow {
-        grid-column: 1 / 3;
-        grid-row: 3 / 4;
+
+
+#hyperloom > #hyp-swap-glow, #hyperloom-big > #hyp-swap-glow {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      background: radial-gradient(ellipse at center,
+      var(--BLACK-A) 0%, 
+      var(--BLUE-LITE) 38.197%, 
+      var(--BLUE-HMED) 61.803%, 
+      var(--BLACK-A) 100%);
+      border: 9px double var(--BLUE-DARK);
+      outline: 5px solid var(--BLUE-LMED);
+      outline-offset:-6px;
+      outline-style: dotted;
+      top: 0;
+      left: 0;
+      z-index: -100;
+      display: block;
+      opacity: 0;
+    }
+    #hyp-air {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    #hyperloom > #hyp-air {
         border-radius: 0 0 1em 1em;
         background: radial-gradient(ellipse at top left,
         var(--BLACK-A) 0%, 
@@ -190,105 +670,379 @@
         var(--YELLW-HMED-05) 61.803%, 
         var(--BLACK-A) 100%);
     }
-  
-    #hyperloom > #hl-red {
 
-        grid-column: 2 / 3;
-        grid-row: 1 / 3;
-        border-radius: 0 1em 0 0;
-        /*14.59 23.607 61.803 38.197*/
-
-        background: radial-gradient(ellipse at bottom left,
-        var(--BLACK-A)23.607%, 
-        var(--RED-DARK-05)38.197%, 
-        var(--RED-LMED-05) 61.803%, 
-        var(--BLACK-A) 100%);
-        border: 5px solid var(--RED-HMED);
-    }
-  
-    #hyperloom > header > #hl-blue {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-    }
-    
-    #hl-green {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: radial-gradient(ellipse at top right,
-        var(--BLACK-A) 23.607%, 
-        var(--GREEN-HMED-05) 61.803%, 
-        var(--BLACK-A) 100%);
-        overflow: hidden;
-    }
+    #hyperloom-big > #hyp-air {
+      border-radius: 1em 0 1em 1em;
+      background: radial-gradient(ellipse at top left,
+      var(--BLACK-A) 0%, 
+      var(--YELLW-LMED-05) 38.197%, 
+      var(--YELLW-HMED-05) 61.803%, 
+      var(--BLACK-A) 100%);
   }
   
-  /*---------------------------------------------------------------------------------------*/
-  
-  /* PORTRAIT ORIENTATION */
-
-@media all and (orientation: portrait) {
-
-    #hyperloom{
-        grid-template-columns: 38.197% 61.803%;
-        grid-template-rows: 38.197% 61.803%; 
-    }
-  
-    #hyperloom > header {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-        grid-template-rows: 100%;
-        grid-template-columns: 61.803% 38.197%;
-    }
-  
-    #hyperloom > #hl-yellow {
-        grid-row: 1 / 3;
-        grid-column: 2 / 3;
-        border-radius: 1em 1em 1em 0;
-        background: radial-gradient(ellipse at bottom right,
-        var(--BLACK-A) 0%, 
-        var(--YELLW-LMED-05) 38.197%, 
-        var(--YELLW-HMED-05) 61.803%, 
-        var(--BLACK-A) 100%);
-    }
-  
-    #hyperloom > #hl-red {
-        grid-column: 1 / 2;
+    #hyperloom > #hyp-subdiv > #hyp-fire {
         grid-row: 2 / 3;
-        border-radius: 0 0 0 1em ;
-        background: radial-gradient(ellipse at top right,
+        grid-column: 1 / 3;
+        border-radius: 0 0 0 0;
+        background: radial-gradient(ellipse at bottom center,
         var(--BLACK-A)23.607%, 
         var(--RED-DARK-05)38.197%, 
         var(--RED-LMED-05) 61.803%, 
         var(--BLACK-A) 100%);
-        /*14.59 23.607 61.803 38.197*/
-        border: 5px solid var(--RED-HMED);
     }
+
+/*14.59 23.607 61.803 38.197*/
+    #hyperloom-big > #hyp-subdiv > #hyp-fire {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      border-radius: 0 1em 0 0 ;
+      background: radial-gradient(ellipse at bottom left,
+      var(--BLACK-A)23.607%, 
+      var(--RED-DARK-05)38.197%, 
+      var(--RED-LMED-05) 61.803%, 
+      var(--BLACK-A) 100%);
+  }
   
-    #hyperloom > header > #hl-blue {
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;
+    #hyperloom > #hyp-subdiv > #hyp-water {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+        border-radius: 1em;
+        width:0%;
+        height:0%;
+        padding: 0%;
+        border-radius: 1em 0 0 0;
     }
+
+    #hyp-subdiv > #hyp-earth {
+      grid-template-rows: 38.197% 61.803%;
+      grid-template-columns: 100%;
+    }
+
     
-    #hl-green {
-        max-width: 100%;
-        max-height: 100%;
-        grid-template-columns: 38.197% 61.803%;
-        grid-template-rows: 100%;
-        border-radius:0 0 0 0 ;
-        grid-column: 2 / 3;
+    #hyperloom > #hyp-subdiv > #hyp-earth {
         grid-row: 1 / 2;
-        border-radius: 0 1em 0 0;
-        border: 5px solid var(--GREEN-LITE);
-        background: radial-gradient(ellipse at bottom left,
+        grid-column: 1 / 3;
+        border-radius: 1em 1em 0 0;
+        background: radial-gradient(ellipse at top right,
         var(--BLACK-A) 23.607%, 
         var(--GREEN-HMED-05) 61.803%, 
         var(--BLACK-A) 100%);
 
     }
+    #hyperloom-big > #hyp-subdiv > #hyp-earth {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      border-radius: 0 0 0 1em;
+      background: radial-gradient(ellipse at top right,
+      var(--BLACK-A) 23.607%, 
+      var(--GREEN-HMED-05) 61.803%, 
+      var(--BLACK-A) 100%);
+  }
+
+  #hyp-subdiv > #hyp-earth {
+    grid-template-columns: 38.197% 61.803%;
+    grid-template-rows: 100%;
+  }
 }
+  
   /*---------------------------------------------------------------------------------------*/
+    
+  
+    @media all and (orientation: landscape) {
+      
+      @keyframes hypSubdivSmaller {
+        0% {
+          grid-template-columns: 38.197% 61.803%;
+          grid-template-rows: 61.803% 38.197%;
+        }
+  
+        100% {
+          grid-template-rows: 38.197% 61.803%;
+          grid-template-columns: 38.197% 61.803% ;
+        }
+      }
   
   
+      @keyframes hypSubdivBigger {
+        0% {
+          grid-template-rows: 38.197% 61.803%;
+          grid-template-columns:  38.197% 61.803%;
+        }     
+      
+        100% {
+          grid-template-columns: 38.197% 61.803%;
+          grid-template-rows: 61.803% 38.197%;
+          
+        }
+      }
+  
+      @keyframes hypSwapGlowBigger{
+        0% {
+          display: none;
+          opacity: 0;
+        }
+  
+        1% {
+          display: block;
+          opacity: 0;
+        }
+  
+        50% {
+          display: block;
+          opacity: 100%;
+        } 
+  
+        99% {
+          display: block;
+          opacity: 0;
+        }
+  
+        
+        100% {
+          display: none;
+          opacity: 0%;
+        } 
+      }
+  
+      @keyframes hypSwapGlowSmaller{
+        0% {
+          display: none;
+          opacity: 0;
+          
+        }
+  
+        1% {
+          display: block;
+          opacity: 0;
+        }
+  
+        50% {
+          display: block;
+          opacity: 100%;
+        } 
+  
+        99% {
+          display: block;
+          opacity: 0;
+        }
+  
+        
+        100% {
+          display: none;
+          opacity: 0%;
+        } 
+  
+      }
+  
+      @keyframes hyperloomSmaller {
+        0% {
+          grid-template-rows: 38.197% 61.803%;
+          grid-template-columns: 100%; 
+        }
+  
+        100% {
+          grid-template-rows: 38.197% 61.803%;
+          grid-template-columns: 100%; 
+        }
+      }
+  
+      @keyframes hyperloomBigger {
+        0% {
+          grid-template-rows: 38.197% 61.803%;
+          grid-template-columns: 100%; 
+        }
+      
+        100% {
+          grid-template-rows: 38.197% 61.803%;
+          grid-template-columns: 100%; 
+          
+        }
+      }
+  
+      @keyframes hypFireSmaller {
+        0% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(61.803%,0);
+          width:61.803%;
+          height:100%;
+          border-radius: 0 1em 0 0; 
+          
+        }
+        
+        100% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(0,61.803%);
+          width:100%;
+          height:61.803%;
+        }
+      }
+  
+      @keyframes hypFireBigger {
+        0% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(0%, 61.803%);
+          height:61.803%;
+          width:100%;
+          border-radius: 0 0 0 0 ;
+        }
+  
+        100% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(61.803%, 0);
+          height:100%;
+          width:61.803%;
+          border-radius: 0 1em 0 0;
+        }
+      }
+  
+      @keyframes hypEarthSmaller {
+        0% {
+          transform: translate(0,161.803%);
+          width:38.197%;
+          height:61.803%;
+          border-radius: 0 0 0 1em; 
+          
+        }
+        
+        100% {
+          transform: translate(0,0);
+          height: 100%;
+          width:100%;
+          border-radius: 1em 1em 0 0; 
+        }
+      }
+  
+      @keyframes hypEarthBigger {
+        0% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(0,0);
+          height:38.197%;
+          width:100%;
+          border-radius: 1em 1em 0 0;
+        }
+        
+        100% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          transform: translate(0,161.803%);
+          height:38.197%;
+          width:38.197%;
+          border-radius: 0 0 0 1em;
+        }
+  
+        
+      }
+  
+      @keyframes hypWaterSmaller {
+        0% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+         height:61.803%;
+          width:38.197%;
+          border-radius: 1em 0 0 0;
+        }
+  
+        100% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+         height:0%;
+          width:0%;
+          padding: 0%;
+          border-radius: 1em 0 0 0;
+          border-width: 0;
+        }
+      } 
+  
+      @keyframes hypWaterBigger {
+        0% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          width:0%;
+          height:0%;
+          border-radius: 1em 0 0 0;
+          border-width: 0;
+        }
+  
+        100% {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+          height:61.803%;
+          width:38.197%;
+          border-radius: 1em 0 0 0;
+        }
+      }
+  
+  #hyperloom-big > #hyp-swap-glow,
+  #hyperloom> #hyp-swap-glow, 
+  #hyperloom, #hyperloom-big,
+  #hyperloom > #hyp-subdiv,
+  #hyperloom-big > #hyp-subdiv,
+  #hyperloom > #hyp-subdiv > #hyp-fire,
+  #hyperloom-big > #hyp-subdiv > #hyp-fire,
+  #hyperloom > #hyp-subdiv > #hyp-earth,
+  #hyperloom-big > #hyp-subdiv > #hyp-earth,
+  #hyperloom > #hyp-subdiv > #hyp-water,
+  #hyperloom-big > #hyp-subdiv > #hyp-water {
+    animation-duration: 0.3s;
+    animation-timing-function:linear;
+  }
+  
+  #hyperloom {
+    animation-name: hyperloomSmaller;
+  }
+  
+  #hyperloom-big {
+    animation-name: hyperloomBigger;
+  }
+  
+  #hyperloom > #hyp-subdiv {
+    animation-name: hypSubdivSmaller;
+  }
+  
+  
+  #hyperloom-big > #hyp-subdiv {
+    animation-name: hypSubdivBigger;
+  }
+  
+  #hyperloom > #hyp-swap-glow {
+    animation-name: hypSwapGlowBigger;
+  }
+  
+  #hyperloom-big > #hyp-swap-glow{
+    animation-name: hypSwapGlowSmaller;
+  }
+  
+  
+  #hyperloom > #hyp-subdiv > #hyp-fire {
+    animation-name: hypFireSmaller;
+  }
+  
+  
+  #hyperloom-big > #hyp-subdiv > #hyp-fire{
+    animation-name: hypFireBigger;
+  }
+  
+  
+  #hyperloom > #hyp-subdiv > #hyp-earth {
+    animation-name: hypEarthSmaller;
+  }
+  
+  
+  #hyperloom-big > #hyp-subdiv > #hyp-earth{
+    animation-name: hypEarthBigger;
+  }
+  
+  #hyperloom > #hyp-subdiv > #hyp-water {
+    animation-name: hypWaterSmaller;
+  }
+  
+  
+  #hyperloom-big > #hyp-subdiv > #hyp-water{
+    animation-name: hypWaterBigger;
+  }
+    }
