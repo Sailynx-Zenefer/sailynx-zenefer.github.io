@@ -3,6 +3,7 @@
   background-color: var(--BLUE-LMED-05);
   border-radius: 5.573%;
   color: var(--RED-HMED-05);
+  margin: 5px;
 }
 
 .hw-page h2 {
@@ -10,6 +11,7 @@
   background-color: var(--BLUE-DARK-05);
   border-radius: 5.573%;
   color: var(--YELLW-LITE-075);
+  margin: 5px;
 }
 
 .hw-page h3 {
@@ -17,12 +19,14 @@
   background-color: var(--BLUE-DARK-05);
   border-radius: 5.573%;
   color: var(--GREEN-HLITE-075);
+  margin: 5px;
 }
 .hw-page p {
   background-color: var(--BLUE-DARK-05);
   border-radius: 5.573%;
   box-decoration-break: clone;
   color: var(--BLUE-HLITE);
+  margin: 5px;
 }
 
 .hw-page .highlight {
