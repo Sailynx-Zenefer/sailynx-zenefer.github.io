@@ -1,8 +1,8 @@
 export default function ImgBoxContainer({children}) {
 
     return (
-      <div id={'ImgBoxContainer'}>
+      <ul id={'hwimgboxcontainer'}>
         {children}
-      </div>
+      </ul>
     );
   }

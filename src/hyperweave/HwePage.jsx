@@ -1,6 +1,6 @@
 import { useParams, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import HwePageGen from "./page-bits/HwePageGen.mdx";
+import HwePageGen from "./page-components/HwePageGen.mdx";
 import { MDXProvider } from "@mdx-js/react";
 const pages = import.meta.glob("./pages/*.mdx", { eager: true });
 const wbPages = import.meta.glob("./pages/willow-bumble/*.mdx", { eager: true });

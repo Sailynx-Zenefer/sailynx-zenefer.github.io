@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 const imgs = import.meta.glob('../../img/*');
 
-export default function ImgBox({ imgName }) {
+export default function ImgBox({ imgName, caption}) {
     const [img, setImg] = useState(null);
 //     imgs[`../../img/${imgName}`]()
 //     .then((mod) => {
@@ -35,7 +35,9 @@ export default function ImgBox({ imgName }) {
 
     return (
         <div id={"hwimgbox"}>
-            {img ? <img src={img} alt={imgName} /> : <p>Loading...</p>}
+            {img ?
+            <img src={img} alt={imgName} /> : <p>Loading...</p>}
+            {caption ? <p>{caption}</p> : <></>}
         </div>
     );
 }

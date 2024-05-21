@@ -1,7 +1,8 @@
 
 
-import PageLink from '../../page-bits/PageLink.jsx'
-import ImgBox from '../../page-bits/ImgBox'
+import PageLink from '../../page-components/PageLink.jsx'
+import ImgBox from '../../page-components/ImgBox'
+import ImgBoxContainer from '../../page-components/ImgBoxContainer'
 
 {<PageLink endpoint={`/hyperweave/sailynx-zenefer`} linkText={'(sailynx-zenefer)'}/>} presents
 
@@ -14,23 +15,22 @@ though, maybe...
 ### you want to see {<PageLink endpoint={`/hyperweave/psytrus-beeshine/sidereal-tshirts`} linkText={'(sidereal-tshirts)'}/>}? 
 ---
 anywayhow, here are the clothes:
-### Bumblebee Tricorne
-<ImgBox imgName={"tricorne1.jpg"}/>
+### Bumblebee Tricorne (make this a link )
+{<ImgBoxContainer>
+    <ImgBox imgName={"tricorne1.jpg"} 
+    caption={"In the beggining the hat was a plain old tricorne"}/>
+    <ImgBox imgName={"tricorne2.jpg"}
+    caption={"then, on new years eve 2018-19 I stuck leftover christmas baubles on it with wire and tape"}/>
+    <ImgBox imgName={"tricorne3.jpg"}
+    caption={"Later on, Somebody kindly made me light up antennae"}/>
+    <ImgBox imgName={"tricorne4.jpg"}
+    caption={"unfortunately these broke and I made silver ones with aluminium"}/>
+    <ImgBox imgName={"tricorne5.jpg"}
+    caption={"copper is cooler though"}/>
+    <ImgBox imgName={"tricorne6.jpg"}
+    caption={"next came poundshop led lighbulbs, hollowed out ready to be copper taped"}/>
+    <ImgBox imgName={"tricorne7.jpg"}
+    caption={"et voila, the current hat"}/>
+</ImgBoxContainer>}
 ---
-<ImgBox imgName={"tricorne2.jpg"}/>
----
-<ImgBox imgName={"tricorne3.jpg"}/>
----
-<ImgBox imgName={"tricorne4.jpg"}/>
----
-<ImgBox imgName={"tricorne5.jpg"}/>
----
-<ImgBox imgName={"tricorne6.jpg"}/>
----
-<ImgBox imgName={"tricorne7.jpg"}/>
----
-T-shirt #2\
-(Needs name)\
-(Has Owner)\
-(Needs picture)
 
