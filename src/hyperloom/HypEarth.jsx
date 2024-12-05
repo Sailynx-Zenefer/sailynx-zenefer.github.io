@@ -6,7 +6,7 @@ export default function HypEarth({ hyperloomBig, setHyperloomBig }) {
   return (
     <div id={"hyp-earth"}>
       <button onClick={toggleBig}>
-        {hyperloomBig ? '►▼':'◄▲'}
+        {hyperloomBig ? '(go small ►◄)':'(go big ◄►)'}
       </button>
       <Link className="hl-link" href={"index.html"}>
         <img id={"hyp-logo"} src={logo} alt={"Siderealism Logo"} />
